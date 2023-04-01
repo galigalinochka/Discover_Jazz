@@ -1,11 +1,36 @@
-import React from 'react';
+import React, { FC } from 'react';
+import styles from '../ui.module.css';
+import { ButtonProps } from '../../../types/types';
 
-const button1 = () => {
+const Button: FC<ButtonProps> = ({ 
+  border,
+  color,
+  children,
+  height,
+  onClick, 
+  radius,
+  width,
+  textAlign,
+  //fontSize,
+  //textTransform,
+  backgroundColor
+}) => {
   return (
-    <div>
-      
-    </div>
+    <button 
+      onClick = {onClick}
+      style = {{
+        backgroundColor,
+        border,
+        borderRadius: border,
+        height,
+        width,
+        color,
+        //fontSize,
+      }}
+    >
+      {children}
+    </button>
   );
 };
 
-export default button1;
+export default Button;
