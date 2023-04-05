@@ -1,5 +1,6 @@
 import React from 'react';
-import Header from './components/header/header';
+import '../src/styles/globals.scss';
+import {Header} from './components/header/Header';
 import Main from './components/mainCard/mainCard';
 import Artists from './components/artistGrid/artistGrid';
 import SaleBlocks from './components/salesBlocks/salesBlocks';
@@ -8,7 +9,7 @@ import Footer from './components/footer/footer';
 
 function App() {
   return (
-    <div className="app-wrapper">
+    <div className="global.scss, container">
       <Header />
       <Main />
       <Artists />
