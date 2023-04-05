@@ -1,0 +1,14 @@
+.container {
+  background: url('../../assets/SalesBlock_background.jpg') no-repeat;
+  background-size: cover;
+  height: 780px;
+  background-position: center;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.gridContainer {
+  
+}
