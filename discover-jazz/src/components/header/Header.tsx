@@ -12,13 +12,19 @@ type Props ={};
 
 export const Header = (props: Props) => {
   const isDesktop = useMediaQuery({
+    query: '(min-width: 1411px)'
+  });
+  const isDesktopMini = useMediaQuery({
+    query: '(min-width: 980px)'
+  });
+  const isLapTop = useMediaQuery({
     query: '(min-width: 769px)'
   });
 
   return (
     
     <div className={styles.headerStyle}>
-      {isDesktop ? (
+      {isDesktop && (
         <>
           <div className={styles.headerElementBlockDesktop}>
             <HeaderElement heading={'tickets'} />
@@ -45,7 +51,52 @@ export const Header = (props: Props) => {
             <HeaderElement heading={'on sale now'} />
           </div>
         </>
-      ) : (
+      )}
+      {isDesktopMini && !isDesktop &&(
+        <>
+        <div className={styles.headerElementBlockDesktop}>
+        <HeaderElement heading={'tickets'} />
+        <img src={ArrowIcon} alt="Arrow Icon" />
+      </div>
+      <div className={styles.headerElementBlockDesktop}>
+        <img src={PointIcon} alt="Point Icon" />
+        <HeaderElement heading={'on sale now'} />
+      </div>
+      <div className={styles.headerElementBlockDesktop}>
+        <HeaderElement heading={'tickets'} />
+        <img src={ArrowIcon} alt="Arrow Icon" />
+      </div>
+      <div className={styles.headerElementBlockDesktop}>
+        <img src={PointIcon} alt="Point Icon" />
+        <HeaderElement heading={'on sale now'} />
+      </div>
+      </>
+      )}
+      {isLapTop && !isDesktop && !isDesktopMini && (
+        <>   
+        <div className={styles.headerElementBlockLapTop}>
+          <img src={PointIcon} alt="Point Icon" />
+          <HeaderElement heading={'on sale now'} />
+        </div>       
+        <div className={styles.headerElementBlockLapTop}>
+          <HeaderElement heading={'tickets'} />
+          <img src={ArrowIcon} alt="Arrow Icon" />
+        </div>
+        <div className={styles.headerElementBlockLapTop}>
+          <img src={PointIcon} alt="Point Icon" />
+          <HeaderElement heading={'on sale now'} />
+        </div>
+        <div className={styles.headerElementBlockLapTop}>
+          <HeaderElement heading={'tickets'} />
+          <img src={ArrowIcon} alt="Arrow Icon" />
+        </div>
+        <div className={styles.headerElementBlockLapTop}>
+          <img src={PointIcon} alt="Point Icon" />
+          <HeaderElement heading={'on sale now'} />
+        </div>
+      </>
+      )}
+      {!isLapTop && !isDesktop && !isDesktopMini &&(
         <>
           <div className={styles.headerElementBlockMobile}>
             <HeaderElement heading={'tickets'} />
