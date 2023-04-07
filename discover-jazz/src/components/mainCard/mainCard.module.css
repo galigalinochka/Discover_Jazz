@@ -1,0 +1,73 @@
+.container {
+  background: url('../../assets/SalesBlock_background.jpg') no-repeat;
+  background-size: cover;
+  height: 984px;
+  background-position: center;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  color: #5667FF;
+}
+
+.gridContainer {
+  width: 91%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.salesBlockHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 64px;
+  margin-bottom: 208px;
+}
+
+.salesBlockHeaderList {
+  display: flex;
+  color: #5667FF;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.salesBlockMain {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 120px; 
+}
+
+.salesBlockMainLogo {
+  width: 760px;
+  height: 256px;
+  padding-right: 4rem;
+  font-weight: 700;
+}
+
+.salesBlockToFestival {
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
+  color: #FFCC38;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+
+.salesBlockMainInfo {
+  display: flex;
+  justify-content: space-between;
+  color: #5667FF;
+  text-transform: uppercase;
+}
+
+.MainInfoDate {
+  font-size: 2.5rem;
+}
+
+.MainInfoPlace {
+  font-size: 1.7rem;
+}
+
+.MainInfoDots {
+  align-self: flex-end;
+}

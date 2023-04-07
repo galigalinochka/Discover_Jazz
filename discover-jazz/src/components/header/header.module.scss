@@ -8,11 +8,13 @@
   color: #242424;
   padding-left: 1.5em;
   padding-right: 1em;
-  gap: 3.5em;
+  gap: 2.7em;
   overflow: hidden;
   margin: 0em;
   
-  
+  @media only screen and (max-width: 1411px) {
+    gap: 2.5em;
+  }
 
   @media only screen and (max-width: 768px) {
     
@@ -28,7 +30,6 @@
 }
 
 .headerElementBlockDesktop {
-
   display: inline-flex; // update to inline-flex for better flexbox behavior
   align-items: center;
   justify-content: center;
@@ -37,14 +38,9 @@
   text-transform: uppercase;
   font-weight: bold;
   flex-wrap: nowrap;
-  overflow: hidden;
-
-  
 }
 
 .headerElementBlockMobile {
-
-  
   display: inline-flex; // update to inline-flex for better flexbox behavior
   align-items: center;
   justify-content: center;
@@ -54,14 +50,20 @@
   font-weight: bold;
   flex-wrap: nowrap;
   overflow: hidden;
-
 }
 
-
-  
-
-    
-  
+.headerElementBlockLapTop {
+  display: inline-flex; // update to inline-flex for better flexbox behavior
+  align-items: center;
+  justify-content: center;
+  font-size: 1.0em;
+  gap: 0.1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+ 
 // .headerStyle {
 //     display: flex;
 //     flex-direction: row;

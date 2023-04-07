@@ -7,7 +7,16 @@ export interface ButtonProps {
   radius?: string;
   width: string;
   textAlign?: string;
-  //fontSize: string;
-  //textTransform: string;
   backgroundColor: string
 }
+
+export interface DivElement extends HTMLDivElement{
+  itemId?: string;
+  itemValue?: string;
+  border?: string;
+  color?: string;
+  height?: string;
+  width?: string;
+  backgroundColor: string;
+}
+

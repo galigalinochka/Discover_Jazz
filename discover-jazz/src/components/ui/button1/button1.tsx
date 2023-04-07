@@ -8,15 +8,11 @@ const Button: FC<ButtonProps> = ({
   children,
   height,
   onClick, 
-  radius,
   width,
-  textAlign,
-  //fontSize,
-  //textTransform,
   backgroundColor
 }) => {
   return (
-    <button 
+    <button className = {styles.button}
       onClick = {onClick}
       style = {{
         backgroundColor,
@@ -25,7 +21,6 @@ const Button: FC<ButtonProps> = ({
         height,
         width,
         color,
-        //fontSize,
       }}
     >
       {children}
@@ -34,3 +29,4 @@ const Button: FC<ButtonProps> = ({
 };
 
 export default Button;
+
