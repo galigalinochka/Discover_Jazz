@@ -4,6 +4,8 @@ import { HeaderElement } from './headerElement/HeaderElement';
 import ArrowIcon from '../ui/headerExtraElements/arrow.svg';
 import PointIcon from '../ui/headerExtraElements/point.svg';
 import { useMediaQuery } from 'react-responsive';
+import styled, { css } from 'styled-components';
+import StyledHeader from './StyledHeader';
 //import Ticker from 'react-ticker';
 
 
@@ -15,9 +17,11 @@ export const Header = (props: Props) => {
     query: '(min-width: 769px)'
   });
 
+  
+
   return (
     
-    <div className={styles.headerStyle}>
+    <StyledHeader>
       {isDesktop ? (
         <>
           <div className={styles.headerElementBlockDesktop}>
@@ -61,7 +65,7 @@ export const Header = (props: Props) => {
           </div>
         </>
       )}
-    </div>
+    </StyledHeader>
   );
 };
 
