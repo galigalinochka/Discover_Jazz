@@ -1,14 +1,17 @@
 @import 'fonts';
 
 html, body{
+  display: flex;
+  justify-content: center;
   font-family: 'inter', sans-serif;
   font-size: 14px;
   margin: 0 auto;  
+  background-color: black;
 }
 
 .container{
  
-  max-width: auto;
+  max-width: 1475px;
   
 
   
