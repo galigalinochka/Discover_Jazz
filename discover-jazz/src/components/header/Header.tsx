@@ -32,10 +32,7 @@ export const Header = (props: Props) => {
 
     <div className={styles.headerStyle}>
       {isDesktop && (
-<<<<<<< HEAD
 
-=======
->>>>>>> e132c15a44ceaae9061756552df090eab30523d1
         <>
           <div className={styles.headerElementBlockDesktop}>
             <HeaderElement heading={'tickets'} />
