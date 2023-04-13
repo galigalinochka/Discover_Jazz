@@ -3,6 +3,7 @@ import styles from './mainCard.module.css';
 import Logo from  '../../assets/Logo.png';
 import Burger from  '../../assets/Burger.svg';
 import DiscoverJazz from '../../assets/DiscoverJazz.svg';
+import SelectBlock from './selectBlock';
 
 const salesBlocks: FC = () => {
   return (
@@ -36,7 +37,7 @@ const salesBlocks: FC = () => {
           
         </div>
         <div className = {styles.salesBlockFooter}>
-          
+          <SelectBlock />
         </div>
       </div>
   );

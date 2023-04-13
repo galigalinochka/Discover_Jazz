@@ -1,16 +1,27 @@
-/*import React from 'react';
+import React, { FC } from 'react';
+import { default as ReactSelect } from 'react-select';
+import styles from '../ui.module.css';
+import { ISelectProps, ISelectOption } from '../../../types/types';
 
-
-const Select = ({options, defaultValue, value, onChange}) => {
+const Select: FC<ISelectProps> = ({ 
+  className,
+  options,
+  styles,
+  value,
+  onBlur,
+  onFocus,
+  onChange
+}) => {
   return (
-    <select value = {value}
-    onChange = { event => onChange(event.target.value)}>
-      <option disabled value = ''>{defaultValue}</option>
-      {options.map(option => 
-      <option key = {option.value} value = {option.value}>
-        {option.name}
-      </option>
-        )}
-    </select>
-  );
-};*/
+    <ReactSelect className = {className}
+      styles = { styles }
+      options = { options }
+      value = { value }
+      onBlur = { onBlur }
+      onFocus = { onFocus }
+      onChange = { onChange }
+    />
+  )
+}
+
+export default Select;
