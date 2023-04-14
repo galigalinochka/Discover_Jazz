@@ -3,6 +3,7 @@ import styles from './mainCard.module.css';
 import Logo from  '../../assets/Logo.png';
 import Burger from  '../../assets/Burger.svg';
 import DiscoverJazz from '../../assets/DiscoverJazz.svg';
+import SelectBlock from './selectBlock';
 
 const salesBlocks: FC = () => {
   return (
@@ -13,7 +14,7 @@ const salesBlocks: FC = () => {
             <div className = {styles.salesBlockHeaderList}>
               <span>Artists</span>
               <span>Line-up</span>
-              <img src={Burger} alt="burger" />
+              <img src={Burger} alt="burger" className = {styles.burger}/>
             </div>
           </div>
           <div className = {styles.salesBlockMain}>
@@ -27,15 +28,17 @@ const salesBlocks: FC = () => {
               <div className = {styles.MainInfoPlace}>New york · manhattan</div>
             </div>
             <div className = {styles.MainInfoDots}>
-              <span> . </span>
-              <span> . </span>
-              <span> . </span>
-              <span> . </span>
+              <span> </span>
+              <span> </span>
+              <span> </span>
+              <span> </span>
           </div>
           </div>
           
         </div>
-        <div className = {styles.salesBlockFooter}></div>
+        <div className = {styles.salesBlockFooter}>
+          <SelectBlock />
+        </div>
       </div>
   );
 };

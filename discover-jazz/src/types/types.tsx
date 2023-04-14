@@ -1,3 +1,6 @@
+import { GroupBase,  OnChangeValue, SingleValue, StylesConfig, MultiValue } from 'react-select';
+import React, { FocusEventHandler } from 'react';
+
 export interface ButtonProps {
   border: string;
   color: string;
@@ -8,6 +11,23 @@ export interface ButtonProps {
   width: string;
   textAlign?: string;
   backgroundColor: string
+}
+
+export type isMultiType = true | false;
+
+export interface ISelectProps {
+  className?: string;
+  options: ISelectOption[];
+  styles?: Partial<StylesConfig<ISelectOption, isMultiType, GroupBase<ISelectOption>>>;
+  value: SingleValue<ISelectOption> | MultiValue<ISelectOption>;
+  onBlur?:  FocusEventHandler<HTMLInputElement>;
+  onFocus?:  FocusEventHandler<HTMLInputElement>;
+  onChange: any;
+}
+
+export interface ISelectOption {
+  value: string;
+  label: string;
 }
 
 export interface DivElement extends HTMLDivElement{
