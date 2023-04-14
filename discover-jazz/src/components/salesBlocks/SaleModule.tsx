@@ -10,7 +10,7 @@ import {
 //   StyledPrice,
 //   StyledUpToDate,
 //   StyledInputWindow,
-StyledButton,
+//StyledButton,
 //   StyledImage,
 //   StyledImageContainer,
 StyledSubheadingParagraph
@@ -59,7 +59,8 @@ export const SaleModule = (props:Props) => {
             }
             height='27.5rem'
             color='#8B97FF'
-            <StyledButton>
+            />
+             {/*<StyledButton>
                 <Button 
                     border="none" 
                     color={'#FFCC38'} 
@@ -73,8 +74,8 @@ export const SaleModule = (props:Props) => {
                  >
     
                  </Button>
-            </StyledButton>
-
+                  </StyledButton>*/}
+           
           <SalesBlock             
             heading='sponsors'
             color="#BEC5FF"
