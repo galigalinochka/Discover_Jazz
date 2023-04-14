@@ -3,7 +3,7 @@ import '../src/styles/globals.scss';
 import {Header} from './components/header/Header';
 import Main from './components/mainCard/mainCard';
 import Artists from './components/artistGrid/artistGrid';
-import SaleBlocks from './components/salesBlocks/salesBlocks';
+import { SaleModule } from '../src/components/salesBlocks/SaleModule';
 import Footer from './components/footer/footer';
 
 
@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Main />
       <Artists />
-      <SaleBlocks />
+      <SaleModule />      
       <Footer />
     </div>
   );
