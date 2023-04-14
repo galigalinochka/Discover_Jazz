@@ -3,7 +3,7 @@ import React from 'react';
 import { Fonts } from '../../../constants/fonts';
 //import styles from '../headerElement/headerElement.module.scss';
 
-type Props = {
+export type Props = {
   
   heading: string;
   

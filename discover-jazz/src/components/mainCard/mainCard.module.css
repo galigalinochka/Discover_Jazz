@@ -21,7 +21,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 64px;
-  margin-bottom: 208px;
+  margin-bottom: 212px;
 }
 
 .salesBlockHeaderList {
@@ -29,12 +29,21 @@
   color: #5667FF;
   font-size: 1.7rem;
   font-weight: 700;
+  text-transform: uppercase;
+  width: 30%;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.burger {
+  width: 23px;
+  height: 18px;
 }
 
 .salesBlockMain {
   display: flex;
   justify-content: end;
-  margin-bottom: 120px; 
+  margin-bottom: 58px; 
 }
 
 .salesBlockMainLogo {
@@ -50,6 +59,8 @@
   color: #FFCC38;
   text-transform: uppercase;
   font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04rem;
 }
 
 
@@ -58,10 +69,13 @@
   justify-content: space-between;
   color: #5667FF;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 .MainInfoDate {
   font-size: 2.5rem;
+  line-height: 3.15rem;
+  letter-spacing: 0.15rem;
 }
 
 .MainInfoPlace {
@@ -69,5 +83,19 @@
 }
 
 .MainInfoDots {
+  width: 15%;
   align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-right: 52px;
+}
+
+.MainInfoDots span {
+  display: block;
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: #8B97FF;
+  border-radius: 50%;
 }
