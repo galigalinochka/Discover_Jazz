@@ -10,7 +10,7 @@ import {
 //   StyledPrice,
 //   StyledUpToDate,
 //   StyledInputWindow,
-StyledButton,
+// StyledButton,
 //   StyledImage,
 //   StyledImageContainer,
 StyledSubheadingParagraph
@@ -59,22 +59,22 @@ export const SaleModule = (props:Props) => {
             }
             height='27.5rem'
             color='#8B97FF'
-            <StyledButton>
-                <Button 
-                    border="none" 
-                    color={'#FFCC38'} 
-                    height={'3.5rem'} 
-                    onClick={function (): void {
-                      throw new Error('Function not implemented.');
-                    }} 
-                    width={'19.5rem'} 
-                    children="subscribe" 
-                    backgroundColor={'#43454A'}
-                 >
+            // <StyledButton>
+            //     <Button 
+            //         border="none" 
+            //         color={'#FFCC38'} 
+            //         height={'3.5rem'} 
+            //         onClick={function (): void {
+            //           throw new Error('Function not implemented.');
+            //         }} 
+            //         width={'19.5rem'} 
+            //         children="subscribe" 
+            //         backgroundColor={'#43454A'}
+            //      >
     
-                 </Button>
-            </StyledButton>
-
+            //      </Button>
+            // </StyledButton>
+            />
           <SalesBlock             
             heading='sponsors'
             color="#BEC5FF"
