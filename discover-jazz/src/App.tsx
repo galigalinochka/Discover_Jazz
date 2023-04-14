@@ -3,7 +3,7 @@ import '../src/styles/globals.scss';
 import {Header} from './components/header/Header';
 import Main from './components/mainCard/mainCard';
 import Artists from './components/artistGrid/artistGrid';
-import { SaleModule } from './components/sale/SaleModule';
+import { SaleModule } from '../src/components/salesBlocks/SaleModule';
 import Footer from './components/footer/footer';
 
 

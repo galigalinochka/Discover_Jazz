@@ -1,28 +1,27 @@
 @import 'fonts';
 
 html, body{
+
   display: flex;
   justify-items: center;
+  justify-content: center;
   box-sizing: border-box;
   font-family: 'Inter-Bold', sans-serif; 
   margin: 0;  
   padding: 0;
-  overflow-y: scroll;
-  box-sizing: border-box;
-  
+    
 }
 
 .container{
  
-  max-width: 95rem;
+  
   height:auto;
-  
-
-  
   
 }
 
 :root {
+
+  
   
   // --main: #88c000;
   // --secondary: #f36183;

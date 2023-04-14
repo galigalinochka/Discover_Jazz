@@ -9,19 +9,19 @@ import {
   StyledPrice,
   StyledUpToDate,
   StyledInputWindow,
-  StyledActionButton,
+  // StyledActionButton,
   StyledImage,
-  StyledImageContainer
+  StyledImageContainer,
   }  from './salesBlock.styles'
-import { type } from 'os';
+// import { type } from 'os';
 
 type Props = {
-  heading?: string;
-  subheading?: string;
+  heading: string;
+  subheading?: any;
   price?: string;
   upToDate?: string;
   inputWindow?: boolean;
-  actionButton?: boolean;
+  actionButton?: any;
   image?: React.ReactNode;
   color?: string;
   backgrounImage?: string;
@@ -52,6 +52,8 @@ export const SalesBlock = (props:Props) => {
 
         <StyledPrice> 
           {props.price}
+          {props.price}
+          {props.price}
         </StyledPrice>
 
         <StyledUpToDate>
@@ -65,12 +67,12 @@ export const SalesBlock = (props:Props) => {
         <StyledInputWindow>
           {props.actionButton}
         </StyledInputWindow>
-
-        <StyledImage>
-          <StyledImageContainer>
+        
+        <StyledImageContainer> 
+          <StyledImage>
             {props.image}
-          </StyledImageContainer>
-        </StyledImage> 
+          </StyledImage> 
+        </StyledImageContainer>   
               
       </StyledSalesBlocks>
     </div>  
