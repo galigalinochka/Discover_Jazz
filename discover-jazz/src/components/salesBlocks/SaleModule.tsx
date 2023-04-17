@@ -11,6 +11,20 @@ import {
   StyledPriceElementLeft,
   StyledPriceElementRight
 } from './salesBlock.styles'
+import {
+//   StyledSalesBlocks,
+//   StyledContainerHeading,
+//   StyledHeading,
+//   StyledSubheading,
+//   StyledPrice,
+//   StyledUpToDate,
+//   StyledInputWindow,
+// StyledButton,
+//   StyledImage,
+//   StyledImageContainer,
+// StyledSubheadingParagraph
+}  from './salesBlock.styles'
+// import { type } from 'os';
 import Sponsors from '../../assets/sponsors.svg'
 
 type Props = {};
