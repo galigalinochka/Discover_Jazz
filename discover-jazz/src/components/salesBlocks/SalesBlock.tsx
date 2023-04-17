@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React, { Children, ReactNode } from 'react';
 import styles from './salesBlocks.module.css';
 import Button from '../ui/button1/button1';
 import {
@@ -12,20 +12,25 @@ import {
   // StyledActionButton,
   StyledImage,
   StyledImageContainer,
+  StyledButtonBuy,
+  StyledButtonInput,  
   }  from './salesBlock.styles'
 // import { type } from 'os';
 
 type Props = {
   heading: string;
-  subheading?: any;
-  price?: string;
+  subheading?: ReactNode;
+  price?: ReactNode;
   upToDate?: string;
   inputWindow?: boolean;
-  actionButton?: any;
+  actionButton1?: ReactNode;
+  actionButton2?: ReactNode;
   image?: React.ReactNode;
   color?: string;
   backgrounImage?: string;
   height?: any;
+  children?: ReactNode;
+  buttonUsed?: boolean;
 };
 
 export const SalesBlock = (props:Props) => {
@@ -51,23 +56,21 @@ export const SalesBlock = (props:Props) => {
         </StyledSubheading>
 
         <StyledPrice> 
-          {props.price}
-          {props.price}
-          {props.price}
+          {props.price}          
         </StyledPrice>
 
         <StyledUpToDate>
           {props.upToDate}
         </StyledUpToDate>
-
-        {/* <StyledActionButton>
-          <Button>{'Go to ticket store'}</Button>
-        </StyledActionButton> */}
-
-        <StyledInputWindow>
-          {props.actionButton}
-        </StyledInputWindow>
         
+        <StyledButtonInput>
+          {props.actionButton2}          
+        </StyledButtonInput>
+
+        <StyledButtonBuy>
+          {props.actionButton1}
+        </StyledButtonBuy>
+
         <StyledImageContainer> 
           <StyledImage>
             {props.image}

@@ -4,8 +4,8 @@ import { HeaderElement } from './headerElement/HeaderElement';
 import ArrowIcon from '../../assets/arrow.svg';
 import PointIcon from '../../assets/point.svg';
 import { useMediaQuery } from 'react-responsive';
-import styled, { css } from 'styled-components';
-import StyledHeader from './StyledHeader';
+// import styled, { css } from 'styled-components';
+// import StyledHeader from './StyledHeader';
 //import Ticker from 'react-ticker';
 
 
