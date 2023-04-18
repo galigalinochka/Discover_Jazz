@@ -19,11 +19,8 @@ import {
 //   StyledPrice,
 //   StyledUpToDate,
 //   StyledInputWindow,
-<<<<<<< HEAD
-// StyledButton,
-=======
-//StyledButton,
->>>>>>> 06257bf9cd5e05b47dd7f12494493669c28922eb
+//   StyledButton,
+//   StyledButton,
 //   StyledImage,
 //   StyledImageContainer,
 // StyledSubheadingParagraph
@@ -199,70 +196,3 @@ export const SaleModule = (props:Props) => {
 
 
 
-<<<<<<< HEAD
-=======
-          <SalesBlock 
-            heading='tickets'
-            height='25rem'
-            color='#8B97FF'
-
-          />
-
-          <SalesBlock 
-            heading='subscribe'
-            height='29.5rem'
-            color='#BEC5FF'
-          />
-
-          <SalesBlock 
-            heading='info'
-            subheading={
-              <>
-                <StyledSubheadingParagraph>
-                  The Blue Note Jazz Festival is a celebration of the best in contemporary jazz music.
-                  It is a two weeks long event that features some of the most talented and renowned jazz musicians from around the world.
-                </StyledSubheadingParagraph>
-                <StyledSubheadingParagraph>  
-                  The Blue Note Jazz Festival was first held in 2011 in New York City. 
-                  It was created by the Blue Note Jazz Club, which is one of the oldest and most prestigious jazz venues in the world. 
-                </StyledSubheadingParagraph> 
-                <StyledSubheadingParagraph>
-                  The festival was designed to showcase the best jazz music from around the world and to bring together jazz enthusiasts from all over.
-                </StyledSubheadingParagraph>
-              </>
-            }
-            height='27.5rem'
-            color='#8B97FF'
-            />
-             {/*<StyledButton>
-                <Button 
-                    border="none" 
-                    color={'#FFCC38'} 
-                    height={'3.5rem'} 
-                    onClick={function (): void {
-                      throw new Error('Function not implemented.');
-                    }} 
-                    width={'19.5rem'} 
-                    children="subscribe" 
-                    backgroundColor={'#43454A'}
-                 >
-    
-                 </Button>
-                  </StyledButton>*/}
-           
-          <SalesBlock             
-            heading='sponsors'
-            color="#BEC5FF"
-            height="27.5rem"
-            image={
-                <img src={Sponsors} alt="Sponsors" />
-              }
-          />
-
-        </section>
-
-     );
-    
-    
-};
->>>>>>> 06257bf9cd5e05b47dd7f12494493669c28922eb
