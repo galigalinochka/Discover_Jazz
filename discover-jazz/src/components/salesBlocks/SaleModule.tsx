@@ -50,19 +50,19 @@ export const SaleModule = (props:Props) => {
         
             <StyledPriceElement>
               <StyledPriceElementLeft>
-                all days
+                2 days 
               </StyledPriceElementLeft>
               <StyledPriceElementRight>
-                150$
+                100$
               </StyledPriceElementRight>
             </StyledPriceElement>
         
             <StyledPriceElement>
               <StyledPriceElementLeft>
-                all days
+                1 day 
               </StyledPriceElementLeft>
               <StyledPriceElementRight>
-                150$
+                70$
               </StyledPriceElementRight>
             </StyledPriceElement>
           </>

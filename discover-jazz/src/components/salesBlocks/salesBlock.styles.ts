@@ -5,8 +5,9 @@ import styled, {css} from "styled-components";
 export const StyledSalesBlocks = styled.section`
 
   display: inline-block; 
+  box-sizing: border-box;
   position: relative;  
-  margin: 0rem;
+  margin: -0.2rem;
   padding: 0rem;
   width: 100%;
   
@@ -78,9 +79,12 @@ export const StyledSubheadingParagraphStayAptoDate =styled.div`
 export const StyledPrice = styled.p`
 
   display: block; 
+  margin-left: 22.5rem;
+  margin-right: 35rem;
+  /* text-align: center; */
   /* justify-content: center; */
-  position: absolute;
-  text-align: center;
+  
+  
   /* vertical-align: middle; */  
   /* flex-direction: column;  
   flex-wrap: wrap-reverse; */
@@ -102,6 +106,10 @@ export const StyledPriceElementLeft = styled.p`
   font-weight: bold;
   font-size: 28px;
   line-height: 32px;
+  width: 22.563rem;
+  /* margin-right: 14.375rem; */
+  margin-top: 0.25rem;
+  margin-bottom:0.25rem;
   text-align: left;
   text-transform: uppercase;
   /* padding-right: 14rem;  */
@@ -115,7 +123,9 @@ export const StyledPriceElementRight = styled.p`
   font-size: 64px;
   line-height: 72px;
   line-height: 93%;
-  text-align: right;
+  text-align: left;
+  margin-top: 0.25rem;
+  margin-bottom:0.25rem;
 
 `
 
@@ -139,6 +149,7 @@ export const StyledButtonInput = styled.span`
 
   display: flex;
   text-align: right;
+  
   /* padding-bottom: 10px;   */
   justify-content: flex-end;
   margin-top: 2rem;
@@ -148,12 +159,17 @@ export const StyledButtonInput = styled.span`
 
 export const StyledImageContainer = styled.p`
 
-  display: inline-block; 
-  position: absolute;
-  text-align: center;
-  vertical-align: middle;
-  top: 30%;   
-  width: 100%;
+  display: block; 
+  
+  margin-left: 16rem;
+  margin-right: 12rem;
+  margin-top: 6rem;
+  /* position: absolute; */
+  
+  /* /* text-align: center; */
+  /* vertical-align: middle;  */
+  /* top: 30%; */
+  /* width: 100%; */ 
   /* transform: translate(-50%, -50%); */  
   
 `
@@ -161,8 +177,9 @@ export const StyledImageContainer = styled.p`
 
 export const StyledImage = styled.p`
   
-  width: 100%;
-  height: 6.375rem;   
-  vertical-align: middle;    
+  display: block;
+  /* width: 100%;
+  height: 6.375rem;    
+  /* vertical-align: middle;     */
      
 `
