@@ -1,5 +1,5 @@
 import React, { useState, FC } from 'react';
-import Select from '../ui/select/select';
+import {Select, SelectStyles} from '../ui/select/select';
 import { ISelectOption } from '../../types/types';
 import styles from './mainCard.module.css';
 import { SingleValue } from 'react-select';
@@ -7,13 +7,31 @@ import { SingleValue } from 'react-select';
 const SelectBlock: FC = () => {
   const MAIN_STAGE = 'MAIN STAGE';
   const SECOND_STAGE = '2nd STAGE';
-  const options: ISelectOption[] = [
+  const optionsStage: ISelectOption[] = [
     {value: 'MAIN_STAGE', label: MAIN_STAGE },
     {value: 'SECOND_STAGE', label: SECOND_STAGE}
   ];
-  const[selectedOption, setSelectedOption] = useState<ISelectOption>({
+  const optionsDate: ISelectOption[] = [
+    {value: '20 MAY', label: '20 MAY' },
+    {value: '21 MAY', label: '21 MAY' },
+    {value: '27 MAY', label: '27 MAY' },
+    {value: '28 MAY', label: '28 MAY' },
+  ];
+  const optionsSort: ISelectOption[] = [
+    {value: 'POPULAR', label: 'POPULAR' },
+    {value: 'FOLK', label: 'FOLK' },
+    {value: 'POP', label: 'POP' },
+  ];
+  const[selectedDate, setSelectedDate] = useState<ISelectOption>({
     value: 'ALL', label: 'ALL'
   });
+  const[selectedStage, setSelectedStage] = useState<ISelectOption>({
+    value: 'ALL', label: 'ALL'
+  });
+  const[selectedSort, setSelectedSort] = useState<ISelectOption>({
+    value: 'ALL', label: 'ALL'
+  });
+
   const [isSelectOpened, setIsSelectOpened] = useState(false);
 
   const handleBlur = () => {
@@ -24,24 +42,58 @@ const SelectBlock: FC = () => {
     setIsSelectOpened(true);
   }
 
-  const handleChange = (selectedOption: SingleValue<ISelectOption>) => {
+  const handleDateChange = (selectedOption: SingleValue<ISelectOption>) => {
     if(selectedOption === null) return;
-    setSelectedOption(selectedOption)
+    setSelectedDate(selectedOption)
+  }
+
+  const handleStageChange = (selectedOption: SingleValue<ISelectOption>) => {
+    if(selectedOption === null) return;
+    setSelectedStage(selectedOption)
+  }
+
+  const handleSortChange = (selectedOption: SingleValue<ISelectOption>) => {
+    if(selectedOption === null) return;
+    setSelectedSort(selectedOption)
   }
 
   return (
-    <div className = {styles.selectBlock}>
-      <span className={styles.filtersHeader}>Filters</span>
-      <div className={styles.filtersStage}>
-        <span className={styles.filtersName}>STAGE</span>
+  <div className = {styles.selectBlock}>
+    <span className={styles.filtersHeader}>Filters</span>
+    <div className={styles.filters}>
+      <span className={styles.filtersName}>DATE</span>
         <Select className = {isSelectOpened ? styles.select : styles.selectActive}
-                options = {options}
-                value = {selectedOption}
+                styles = {SelectStyles}
+                options = {optionsDate}
+                value = {selectedDate}
                 onBlur = {handleBlur}
                 onFocus = {handleFocus}
-                onChange={handleChange}
-      />
-      </div>
+                onChange={handleDateChange}
+        />
+    </div>
+    <div className={styles.filters}>
+      <span className={styles.filtersName}>STAGE</span>
+        <Select className = {isSelectOpened ? styles.select : styles.selectActive}
+                styles = {SelectStyles}
+                options = {optionsStage}
+                value = {selectedStage}
+                onBlur = {handleBlur}
+                onFocus = {handleFocus}
+                onChange={handleStageChange}
+        />
+    </div>
+    <div className={styles.filters}>
+      <span className={styles.filtersName}>SORT</span>
+        <Select className = {isSelectOpened ? styles.select : styles.selectActive}
+                styles = {SelectStyles}
+                options = {optionsSort}
+                value = {selectedSort}
+                onBlur = {handleBlur}
+                onFocus = {handleFocus}
+                onChange={handleSortChange}
+        />
+    </div>
+      
     </div>
   );
 };

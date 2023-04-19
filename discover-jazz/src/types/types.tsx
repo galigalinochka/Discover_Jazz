@@ -30,7 +30,14 @@ export interface ISelectOption {
   label: string;
 }
 
-export interface DivElement extends HTMLDivElement{
+export type DivProps = {
+  
+  heading: string;
+  
+};
+
+/*export interface DivElement extends HTMLDivElement {
+  heading?: string;
   itemId?: string;
   itemValue?: string;
   border?: string;
@@ -38,5 +45,17 @@ export interface DivElement extends HTMLDivElement{
   height?: string;
   width?: string;
   backgroundColor: string;
+}*/
+
+export interface IArtist {
+  id: number;
+  name: string;
+  stage: string;
+  date: string;
+  time: string;
+  artistInfo: string;
+  linkVideo: string;
+  linkTicketBuy: string;
+  photo: string;
 }
 

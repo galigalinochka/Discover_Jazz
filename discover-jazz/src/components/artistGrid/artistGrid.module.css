@@ -1,0 +1,11 @@
+.container {
+  width: 100%;
+}
+
+.artistsContainer {
+  display: grid;
+  grid-template-areas: 
+  "a b c c"
+  "d d e f"
+  "g h i g";
+}

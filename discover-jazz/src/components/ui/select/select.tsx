@@ -1,9 +1,44 @@
 import React, { FC } from 'react';
-import { default as ReactSelect } from 'react-select';
+import { default as ReactSelect, StylesConfig, GroupBase} from 'react-select';
 import styles from '../ui.module.css';
-import { ISelectProps, ISelectOption } from '../../../types/types';
+import styled from 'styled-components';
+import { ISelectProps, ISelectOption, isMultiType } from '../../../types/types';
 
-const Select: FC<ISelectProps> = ({ 
+export const SelectStyles:StylesConfig<ISelectOption, isMultiType, GroupBase<ISelectOption>>  = {
+  container: (styles) => ({
+    ...styles,
+    width: '214px',
+    color: '#BEC5FF',
+    border: 'none',
+    borderStyle: 'none',
+    borderBottom: '1px solid #BEC5FF',
+    outline: 'none',
+  }),
+  
+  control: (styles) => ({
+    ...styles,
+    backgroundColor:'none',
+    border: 'none',
+  }),
+  indicatorSeparator: (styles) => ({
+    ...styles,
+   display: 'none'
+  }),
+  singleValue:(styles) => ({
+    ...styles,
+    color: '#BEC5FF',
+  }),
+
+  option: (
+    styles, { isFocused, isSelected }: { isFocused: boolean; isSelected: boolean }
+  ) => ({
+    ...styles,
+    backgroundColor: isSelected ? "#dfd3c3" : "",
+    color: isFocused || isSelected ? "black" : "",
+  }),
+}
+
+export const Select: FC<ISelectProps> = ({ 
   className,
   options,
   styles,
@@ -13,8 +48,8 @@ const Select: FC<ISelectProps> = ({
   onChange
 }) => {
   return (
-    <ReactSelect className = {className}
-      styles = { styles }
+    <ReactSelect  className = {className}
+      styles = { SelectStyles }
       options = { options }
       value = { value }
       onBlur = { onBlur }
@@ -24,4 +59,5 @@ const Select: FC<ISelectProps> = ({
   )
 }
 
-export default Select;
+
+
