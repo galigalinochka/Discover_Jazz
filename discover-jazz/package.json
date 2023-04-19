@@ -50,6 +50,7 @@
     "@types/react-select": "^5.0.1",
     "@types/styled-components": "^5.1.26",
     "react-select": "^5.7.2",
+    "@types/styled-components": "^5.1.26",
     "sass": "^1.60.0"
   }
 }
