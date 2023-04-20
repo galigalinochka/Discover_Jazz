@@ -3,13 +3,11 @@ import styled, {css} from "styled-components";
 
 export const StyledArtistGrid = styled.section`
 
-    display: grid;
-    grid-template-columns: 360px 360px 360px;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "1 2 3"
-    "4 5 6"
-    "7 8 9 10";
+    display: flex; 
+    max-width: 1440px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
 
 `
 
@@ -29,9 +27,9 @@ export const StyledArtistElementBig = styled.div`
 
         display: flex;
         font-weight: 700;
-        font-size: 36px;
-        line-height: 44px;
-        max-width: 200px;
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        max-width: 12.5rem;
         color: #F8F8F8;
         height: auto;
         flex-wrap: nowrap;
