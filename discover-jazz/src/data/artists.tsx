@@ -1,6 +1,16 @@
 import { IArtist } from "../types/types";
+import  dianaKrall  from '../assets/artists/diana krall.png'
+import kamasiWashington from '../assets/artists/kamasi Washington.png'
+import GregoryPorter from '../assets/artists/Gregory Porter.png'
+import EsperanzaSpalding from '../assets/artists/Esperanza Spalding.png'
+import TerenceBlanchard from '../assets/artists/Terence Blanchard.png'
+import CécileMcLorinSalvant from '../assets/artists/Cécile McLorin Salvant.png'
+import BradMehldau from '../assets/artists/Brad Mehldau.png'
+import AMBROSEAKINMUSIRE from '../assets/artists/AMBROSE AKINMUSIRE.png';
+import HiromiUehara from '../assets/artists/Hiromi Uehara.png';
+import JoshuaRedman from '../assets/artists/Joshua Redman.png';
 
-const artists: IArtist[] = [
+const data: IArtist[] = [
   {
     id: 1,
     name: 'diana krall',
@@ -10,7 +20,7 @@ const artists: IArtist[] = [
     artistInfo: 'https://galigalinochka.github.io/Bali/',
     linkVideo: 'https://galigalinochka.github.io/Bali/',
     linkTicketBuy: 'https://galigalinochka.github.io/Bali/',
-    photo: '../assets/artists/diana krall.jpg',
+    photo: '../assets/artists/diana krall.png',
   },
   {
     id: 2,
@@ -21,7 +31,7 @@ const artists: IArtist[] = [
     artistInfo: 'https://galigalinochka.github.io/Bali/',
     linkVideo: 'https://galigalinochka.github.io/Bali/',
     linkTicketBuy: 'https://galigalinochka.github.io/Bali/',
-    photo: '../assets/artists/kamasi Washington.jpg',
+    photo: kamasiWashington,
   },
   {
     id: 3,
@@ -32,7 +42,7 @@ const artists: IArtist[] = [
     artistInfo: 'https://galigalinochka.github.io/Bali/',
     linkVideo: 'https://galigalinochka.github.io/Bali/',
     linkTicketBuy: 'https://galigalinochka.github.io/Bali/',
-    photo: '../assets/artists/Gregory Porter.jpg',
+    photo: GregoryPorter,
   },
   {
     id: 4,
@@ -43,7 +53,7 @@ const artists: IArtist[] = [
     artistInfo: 'https://galigalinochka.github.io/Bali/',
     linkVideo: 'https://galigalinochka.github.io/Bali/',
     linkTicketBuy: 'https://galigalinochka.github.io/Bali/',
-    photo: '../assets/artists/Esperanza Spalding.png',
+    photo: EsperanzaSpalding,
   },
   {
     id: 5,
@@ -54,7 +64,7 @@ const artists: IArtist[] = [
     artistInfo: 'https://galigalinochka.github.io/Bali/',
     linkVideo: 'https://galigalinochka.github.io/Bali/',
     linkTicketBuy: 'https://galigalinochka.github.io/Bali/',
-    photo: '../assets/artists/Terence Blanchard.png',
+    photo: TerenceBlanchard,
   },
   {
     id: 6,
@@ -65,7 +75,7 @@ const artists: IArtist[] = [
     artistInfo: 'https://galigalinochka.github.io/Bali/',
     linkVideo: 'https://galigalinochka.github.io/Bali/',
     linkTicketBuy: 'https://galigalinochka.github.io/Bali/',
-    photo: '../assets/artists/Cécile McLorin Salvant.png',
+    photo: CécileMcLorinSalvant,
   },
   {
     id: 7,
@@ -76,7 +86,7 @@ const artists: IArtist[] = [
     artistInfo: 'https://galigalinochka.github.io/Bali/',
     linkVideo: 'https://galigalinochka.github.io/Bali/',
     linkTicketBuy: 'https://galigalinochka.github.io/Bali/',
-    photo: '../assets/artists/Brad Mehldau.png',
+    photo: BradMehldau,
   },
   {
     id: 8,
@@ -87,7 +97,7 @@ const artists: IArtist[] = [
     artistInfo: 'https://galigalinochka.github.io/Bali/',
     linkVideo: 'https://galigalinochka.github.io/Bali/',
     linkTicketBuy: 'https://galigalinochka.github.io/Bali/',
-    photo: '../assets/artists/AMBROSE AKINMUSIRE.png',
+    photo: AMBROSEAKINMUSIRE,
   },
   {
     id: 9,
@@ -98,7 +108,7 @@ const artists: IArtist[] = [
     artistInfo: 'https://galigalinochka.github.io/Bali/',
     linkVideo: 'https://galigalinochka.github.io/Bali/',
     linkTicketBuy: 'https://galigalinochka.github.io/Bali/',
-    photo: '../assets/artists/Hiromi Uehara.png',
+    photo: HiromiUehara,
   },
   {
     id: 10,
@@ -109,8 +119,11 @@ const artists: IArtist[] = [
     artistInfo: 'https://galigalinochka.github.io/Bali/',
     linkVideo: 'https://galigalinochka.github.io/Bali/',
     linkTicketBuy: 'https://galigalinochka.github.io/Bali/',
-    photo: '../assets/artists/Joshua Redman.png',
+    photo: JoshuaRedman,
   },
 ]
 
-export default artists;
+export default data;
+
+
+
