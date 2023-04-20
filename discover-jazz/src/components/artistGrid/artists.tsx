@@ -6,7 +6,7 @@ import ArtistsGrid from './artists/artistsGrid';
 const Artists: FC = () => {
   return (
     <div className = {styles.container}>
-      <ArtistsGrid />
+      {/*<ArtistsGrid />*/}
     </div>
   );
 };

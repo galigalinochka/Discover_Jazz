@@ -10,21 +10,6 @@ const ArtistsGrid: FC<IArtist[]> = () => {
       Блок артистов
     </div>
   )
-  /*let artistsElements: IArtist[] =artists.map(artist => 
-    <Artist id= {}
-    name={}
-    stage={}
-    date={}
-    time={}
-    artistInfo={}
-    linkVideo={}
-    linkTicketBuy={}
-    photo={})
-  return (
-    <div className = {styles.artistsContainer}>
-      
-    </div>
-  );*/
 };
 
 export default ArtistsGrid;

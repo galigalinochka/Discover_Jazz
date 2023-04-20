@@ -11,6 +11,7 @@ const artists: IArtist[] = [
     linkVideo: 'https://galigalinochka.github.io/Bali/',
     linkTicketBuy: 'https://galigalinochka.github.io/Bali/',
     photo: '../assets/artists/diana krall.jpg',
+    style: 'popular',
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ const artists: IArtist[] = [
     linkVideo: 'https://galigalinochka.github.io/Bali/',
     linkTicketBuy: 'https://galigalinochka.github.io/Bali/',
     photo: '../assets/artists/kamasi Washington.jpg',
+    style: 'pop',
   },
   {
     id: 3,
@@ -33,6 +35,7 @@ const artists: IArtist[] = [
     linkVideo: 'https://galigalinochka.github.io/Bali/',
     linkTicketBuy: 'https://galigalinochka.github.io/Bali/',
     photo: '../assets/artists/Gregory Porter.jpg',
+    style: 'folk',
   },
   {
     id: 4,
@@ -44,6 +47,7 @@ const artists: IArtist[] = [
     linkVideo: 'https://galigalinochka.github.io/Bali/',
     linkTicketBuy: 'https://galigalinochka.github.io/Bali/',
     photo: '../assets/artists/Esperanza Spalding.png',
+    style: 'pop',
   },
   {
     id: 5,
@@ -55,6 +59,7 @@ const artists: IArtist[] = [
     linkVideo: 'https://galigalinochka.github.io/Bali/',
     linkTicketBuy: 'https://galigalinochka.github.io/Bali/',
     photo: '../assets/artists/Terence Blanchard.png',
+    style: 'folk',
   },
   {
     id: 6,
@@ -66,6 +71,7 @@ const artists: IArtist[] = [
     linkVideo: 'https://galigalinochka.github.io/Bali/',
     linkTicketBuy: 'https://galigalinochka.github.io/Bali/',
     photo: '../assets/artists/Cécile McLorin Salvant.png',
+    style: 'popular',
   },
   {
     id: 7,
@@ -77,6 +83,7 @@ const artists: IArtist[] = [
     linkVideo: 'https://galigalinochka.github.io/Bali/',
     linkTicketBuy: 'https://galigalinochka.github.io/Bali/',
     photo: '../assets/artists/Brad Mehldau.png',
+    style: 'popular',
   },
   {
     id: 8,
@@ -88,6 +95,7 @@ const artists: IArtist[] = [
     linkVideo: 'https://galigalinochka.github.io/Bali/',
     linkTicketBuy: 'https://galigalinochka.github.io/Bali/',
     photo: '../assets/artists/AMBROSE AKINMUSIRE.png',
+    style: 'pop',
   },
   {
     id: 9,
@@ -99,6 +107,7 @@ const artists: IArtist[] = [
     linkVideo: 'https://galigalinochka.github.io/Bali/',
     linkTicketBuy: 'https://galigalinochka.github.io/Bali/',
     photo: '../assets/artists/Hiromi Uehara.png',
+    style: 'folk',
   },
   {
     id: 10,
@@ -110,6 +119,7 @@ const artists: IArtist[] = [
     linkVideo: 'https://galigalinochka.github.io/Bali/',
     linkTicketBuy: 'https://galigalinochka.github.io/Bali/',
     photo: '../assets/artists/Joshua Redman.png',
+    style: 'folk',
   },
 ]
 

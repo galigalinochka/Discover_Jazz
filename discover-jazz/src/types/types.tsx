@@ -57,5 +57,6 @@ export interface IArtist {
   linkVideo: string;
   linkTicketBuy: string;
   photo: string;
+  style: string
 }
 
