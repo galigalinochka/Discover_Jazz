@@ -2,7 +2,7 @@ import React from 'react';
 import '../src/styles/globals.scss';
 import {Header} from './components/header/Header';
 import Main from './components/mainCard/mainCard';
-import Artists from './components/artistGrid/artists';
+import Artists from '../src/components/artistGrid/ArtistGrid';
 import { SaleModule } from '../src/components/salesBlocks/SaleModule';
 import Footer from './components/footer/footer';
 
