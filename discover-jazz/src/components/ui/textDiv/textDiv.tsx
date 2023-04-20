@@ -1,13 +1,14 @@
 import React, { FC } from 'react';
 import styles from '../ui.module.css';
-import { DivElement } from '../../../types/types';
+import { DivProps } from '../../../types/types';
 
-const DivElement: FC = () => {
+const DivElement: FC<DivProps> = (props: DivProps) => {
   return (
-  <div className = {styles.container}>
-    <div></div>
+    <div className = {styles.container}>
+      {props.heading}
     </div>
   )
 }
 
 export default DivElement;
+

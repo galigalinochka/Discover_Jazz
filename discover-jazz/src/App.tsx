@@ -2,7 +2,7 @@ import React from 'react';
 import '../src/styles/globals.scss';
 import {Header} from './components/header/Header';
 import Main from './components/mainCard/mainCard';
-import Artists from './components/artistGrid/artistGrid';
+import Artists from './components/artistGrid/artists';
 import { SaleModule } from '../src/components/salesBlocks/SaleModule';
 import Footer from './components/footer/footer';
 
@@ -12,7 +12,7 @@ function App() {
     <div className="global.scss, container">
       <Header />
       <Main />
-      <Artists />
+      <Artists/>
       <SaleModule />      
       <Footer />
     </div>
