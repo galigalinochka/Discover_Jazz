@@ -1,12 +1,12 @@
 import React, {FC} from 'react';
 import styles from './artistGrid.module.css';
-import ArtistsGrid from './artists/artistsGrid';
+import ArtistsGrid from './ArtistGrid';
 
 
 const Artists: FC = () => {
   return (
     <div className = {styles.container}>
-      {/*<ArtistsGrid />*/}
+      <ArtistsGrid />
     </div>
   );
 };
