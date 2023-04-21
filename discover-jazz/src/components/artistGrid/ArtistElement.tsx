@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArtistHoverMenu } from './ArtistHoverMenu';
 import { StyledArtistElementBig, StyledArtistElementSmall } from '../artistGrid/artistGrid.styles';
 
@@ -12,6 +11,10 @@ type Props = {
 
 const ArtistElement = (props: Props) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [styleImg, setStyleImg] = useState({
+    backgroundImage: `url(${props.photo})`,
+    backgroundSize: 'cover'
+  });
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -21,20 +24,23 @@ const ArtistElement = (props: Props) => {
     setIsHovered(false);
   };
 
-  
+  useEffect(() => {
+    setStyleImg({
+      backgroundImage: `url(${props.photo})`,
+      backgroundSize: 'cover'
+    });
+  }, [props.photo]);
+
+  useEffect(() => {
+    document.title = props.name;
+  }, [props.name]);
+
+  console.log(styleImg)
+
   const StyledArtistElement = props.big ? StyledArtistElementBig : StyledArtistElementSmall;
 
-  const styleImg = {
-    backgroundImage: `url(${props.photo}`,
-    backgroundSize: 'cover'
-  };
-
-  const gridElementPostion = {
-    'grid-area': `${props.id}`
-  };
-
   return (
-    <StyledArtistElement style={{...styleImg, ...gridElementPostion}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <StyledArtistElement style={{...styleImg}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <div>{props.name}</div>
       {isHovered && <ArtistHoverMenu name={props.name} big={props.big} />}
     </StyledArtistElement>
@@ -42,4 +48,3 @@ const ArtistElement = (props: Props) => {
 };
 
 export default ArtistElement;
-

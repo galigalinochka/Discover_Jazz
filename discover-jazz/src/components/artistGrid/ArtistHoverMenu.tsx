@@ -19,7 +19,7 @@ export const ArtistHoverMenu = (props: Props) => {
 
     <StyledHoverMenu>
       <h1>MAIN STAGE</h1>
-      <h1>{props.name}</h1>
+      {/* <h1>{props.name}</h1> */}
       <h2>DATE: 27 MAY</h2>
       <h2>
         <h3>

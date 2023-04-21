@@ -9,7 +9,8 @@ const Artists = () => {
   return (
     <StyledArtistGrid>
       {data.map(artist => {
-        console.log(artist.id);
+        // console.log(artist.id);
+        // console.log(artist.photo);
         return (
           <ArtistElement          
             name={artist.name}
