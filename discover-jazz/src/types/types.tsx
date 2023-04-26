@@ -1,4 +1,4 @@
-import { GroupBase,  OnChangeValue, SingleValue, StylesConfig, MultiValue } from 'react-select';
+import { GroupBase,  OnChangeValue, SingleValue, StylesConfig, MultiValue, ActionMeta } from 'react-select';
 import React, { FocusEventHandler } from 'react';
 
 export interface ButtonProps {
@@ -22,7 +22,7 @@ export interface ISelectProps {
   value: SingleValue<ISelectOption> | MultiValue<ISelectOption>;
   onBlur?:  FocusEventHandler<HTMLInputElement>;
   onFocus?:  FocusEventHandler<HTMLInputElement>;
-  onChange: any;
+  onChange?: any;
 }
 
 export interface ISelectOption {
@@ -35,17 +35,6 @@ export type DivProps = {
   heading: string;
   
 };
-
-/*export interface DivElement extends HTMLDivElement {
-  heading?: string;
-  itemId?: string;
-  itemValue?: string;
-  border?: string;
-  color?: string;
-  height?: string;
-  width?: string;
-  backgroundColor: string;
-}*/
 
 export interface IArtist {
   id: number;

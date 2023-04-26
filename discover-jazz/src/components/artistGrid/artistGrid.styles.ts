@@ -34,6 +34,7 @@ export const StyledArtistElementBig = styled.div`
         height: auto;
         flex-wrap: nowrap;
         justify-content: flex-end;
+        text-transform: uppercase;
 
     }
 
@@ -57,6 +58,7 @@ export const StyledArtistElementSmall = styled.div`
         height: auto;
         flex-wrap: wrap;
         justify-content: flex-end;
+        text-transform: uppercase;
 
     }
     
@@ -66,9 +68,25 @@ export const StyledArtistElementSmall = styled.div`
 export const StyledHoverMenuSmall = styled.span`
 
     display: block;
+    text-align: left;
+    position: absolute;
     height: 360px;
     width: 360px;
     background-color: #F8F8F8;
+    
+    
+    
+    
+    &:hover {
+
+        /* bottom: 0px; */
+        transform: translateY(100%);
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+        z-index: 1;
+        /* transition: opacity 0.5s ease-in-out; */
+
+    }
 
     & h1 {
 
@@ -76,7 +94,9 @@ export const StyledHoverMenuSmall = styled.span`
         font-weight: 700;
         font-size: 36px;
         line-height: 44px;
-        margin: 24px 32px 111px 20px;
+        margin-left: 24px;
+        margin-top: 32px;
+        margin-bottom: 20px;
 
 
     }
@@ -88,7 +108,9 @@ export const StyledHoverMenuSmall = styled.span`
         font-weight: 700;
         font-size: 24px;
         line-height: 30px;
-        margin: 24px 20px 167px 5px;
+        margin-left: 24px;
+        margin-top: 20px;          
+        margin-bottom: 5px;
 
     }
 
@@ -99,8 +121,10 @@ export const StyledHoverMenuSmall = styled.span`
         font-weight: 700;
         font-size: 24px;
         line-height: 30px;
-        margin: 24px 20px 196px 5px;
         
+        /* margin-left: 24px; */
+        margin-top: 20px;          
+        margin-bottom: 5px;
         
     }
 
@@ -113,7 +137,10 @@ export const StyledHoverMenuSmall = styled.span`
         font-size: 16px;
         text-decoration: underline; 
         line-height: 20px;    
-        margin: 24px 13px 164px 20px;
+        /* margin: 24px  164px 20px; */
+        margin-left: 24px;
+        margin-top: 13px;          
+        margin-bottom: 5px;
 
 
     }
@@ -135,10 +162,24 @@ export const StyledHoverMenuSmall = styled.span`
 export const StyledHoverMenuBig = styled.span`
 
     display: block;
+    position: absolute;
     height: 360px;
     width: 720px;
     text-align: left;
     background-color: #F8F8F8;
+    /* transform: translate(0%, 100%); */
+
+
+    &:hover {
+
+        /* bottom: 0px; */
+        transform: translateY(100%);
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+        z-index: 1;
+        /* transition: opacity 0.5s ease-in-out; */
+
+    }
 
     & h1 {
 

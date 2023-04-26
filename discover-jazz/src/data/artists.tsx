@@ -1,14 +1,14 @@
 import { IArtist } from "../types/types";
-import  dianaKrall  from '../assets/artists/diana krall.png'
-import kamasiWashington from '../assets/artists/kamasi Washington.png'
-import GregoryPorter from '../assets/artists/Gregory Porter.png'
-import EsperanzaSpalding from '../assets/artists/Esperanza Spalding.png'
-import TerenceBlanchard from '../assets/artists/Terence Blanchard.png'
-import CécileMcLorinSalvant from '../assets/artists/Cécile McLorin Salvant.png'
-import BradMehldau from '../assets/artists/Brad Mehldau.png'
-import AMBROSEAKINMUSIRE from '../assets/artists/AMBROSE AKINMUSIRE.png';
-import HiromiUehara from '../assets/artists/Hiromi Uehara.png';
-import JoshuaRedman from '../assets/artists/Joshua Redman.png';
+import  dianaKrall  from '../assets/artists/diana_krall.png'
+import kamasiWashington from '../assets/artists/kamasi_Washington.png'
+import GregoryPorter from '../assets/artists/Gregory_Porter.png'
+import EsperanzaSpalding from '../assets/artists/Esperanza_Spalding.png'
+import TerenceBlanchard from '../assets/artists/Terence_Blanchard.png'
+import CécileMcLorinSalvant from '../assets/artists/Cécile_McLorin_Salvant.png'
+import BradMehldau from '../assets/artists/Brad_Mehldau.png'
+import AMBROSEAKINMUSIRE from '../assets/artists/AMBROSE_AKINMUSIRE.png';
+import HiromiUehara from '../assets/artists/Hiromi_Uehara.png';
+import JoshuaRedman from '../assets/artists/Joshua_Redman.png';
 
 const data: IArtist[] = [
   {
