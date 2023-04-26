@@ -11,10 +11,15 @@ type Props = {
 
 const ArtistElement = (props: Props) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [styleImg, setStyleImg] = useState({
-    backgroundImage: `url(${props.photo})`,
-    backgroundSize: 'cover'
-  });
+  const [image, setImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = props.photo;
+    img.onload = () => {
+      setImage(props.photo);
+    };
+  }, [props.photo]);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -23,24 +28,13 @@ const ArtistElement = (props: Props) => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-
-  useEffect(() => {
-    setStyleImg({
-      backgroundImage: `url(${props.photo})`,
-      backgroundSize: 'cover'
-    });
-  }, [props.photo]);
-
-  useEffect(() => {
-    document.title = props.name;
-  }, [props.name]);
-
-  console.log(styleImg)
+  console.log(image);
+  const styleImg = image ? { backgroundImage: `url(${image})`, backgroundSize: 'cover' } : {};
 
   const StyledArtistElement = props.big ? StyledArtistElementBig : StyledArtistElementSmall;
 
   return (
-    <StyledArtistElement style={{...styleImg}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <StyledArtistElement style={styleImg} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <div>{props.name}</div>
       {isHovered && <ArtistHoverMenu name={props.name} big={props.big} />}
     </StyledArtistElement>
@@ -48,3 +42,58 @@ const ArtistElement = (props: Props) => {
 };
 
 export default ArtistElement;
+
+
+// import React, { useState, useEffect, } from 'react';
+// import { ArtistHoverMenu } from './ArtistHoverMenu';
+// import { StyledArtistElementBig, StyledArtistElementSmall } from '../artistGrid/artistGrid.styles';
+
+// type Props = {
+//   name: string;
+//   big: boolean;
+//   photo: string;
+//   id: number;
+// }
+
+// const ArtistElement = (props: Props) => {
+//   const [isHovered, setIsHovered] = useState(false);
+//   const [styleImg, setStyleImg] = useState({
+//     backgroundImage: `url(${props.photo})`,
+//     backgroundSize: 'cover'
+//   });
+
+//   const handleMouseEnter = () => {
+//     setIsHovered(true);
+//   };
+
+//   const handleMouseLeave = () => {
+//     setIsHovered(false);
+//   };
+
+//   useEffect(() => {
+//     setStyleImg({
+//       backgroundImage: `url(${props.photo})`,
+//       backgroundSize: 'cover'
+//     });
+//   }, [props.photo]);
+
+//   useEffect(() => {
+//     document.title = props.name;
+//   }, [props.name]);
+
+//   console.log(styleImg)
+
+//   const StyledArtistElement = props.big ? StyledArtistElementBig : StyledArtistElementSmall;
+
+  
+
+
+//   return (
+//     <StyledArtistElement style={{...styleImg}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+//       <div>{props.name}</div>
+//       {isHovered && <ArtistHoverMenu name={props.name} big={props.big} />}
+//     </StyledArtistElement>
+//   );
+// };
+
+// export default ArtistElement;
