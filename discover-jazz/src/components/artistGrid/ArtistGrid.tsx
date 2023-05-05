@@ -4,6 +4,13 @@ import { StyledArtistGrid } from '../artistGrid/artistGrid.styles'
 import ArtistElement from '../artistGrid/ArtistElement'
 import data from '../../data/artists';
 import { IArtist } from "../../../src/types/types"
+import SelectBlockProps from '../mainCard/selectBlock'
+import filteredData from '../mainCard/selectBlock'
+
+
+
+
+console.log(filteredData)
 
 const Artists = () => {
   return (

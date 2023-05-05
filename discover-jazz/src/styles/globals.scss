@@ -5,7 +5,7 @@ html, body{
   display: flex;
   justify-items: center;
   justify-content: center;
-  box-sizing: border-box;
+  // box-sizing: border-box;
   font-family: 'Inter-Bold', sans-serif; 
   margin: 0;  
   padding: 0;
@@ -41,6 +41,14 @@ html, body{
   // --pinkDark: #b34b63;
 }
 
+.active {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #F4F9FF;
+  text-transform: uppercase;
+
+}
 // .mavick {
 //   font-family: 'Mavick', sans-serif;
 // }

@@ -7,7 +7,7 @@ export const StyledSalesBlocks = styled.section`
   display: inline-block; 
   box-sizing: border-box;
   position: relative;  
-  margin: -0.2rem;
+  margin: 0px;
   padding: 0rem;
   width: 100%;
   
