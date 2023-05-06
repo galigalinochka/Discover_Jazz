@@ -39,13 +39,13 @@ export type DivProps = {
 export interface IArtist {
   id: number;
   name: string;
-  stage: string;
-  date: string;
-  time: string;
-  artistInfo: string;
-  linkVideo: string;
-  linkTicketBuy: string;
+  stage?: string;
+  date?: string;
+  time?: string;
+  artistInfo?: string;
+  linkVideo?: string;
+  linkTicketBuy?: string;
   photo: string;
-  style: string
+  style?: string;
 }
 

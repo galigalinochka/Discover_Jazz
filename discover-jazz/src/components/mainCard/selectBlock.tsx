@@ -5,6 +5,7 @@ import styles from './mainCard.module.css';
 import { SingleValue } from 'react-select';
 import * as artistsAPI from '../../api/artists';
 import { error } from 'console';
+import Artists from '../artistGrid/ArtistGrid';
 
 const SelectBlock: FC = () => {
   const MAIN_STAGE = 'MAIN STAGE';
@@ -25,7 +26,7 @@ const SelectBlock: FC = () => {
     {value: 'POP', label: 'POP' },
   ];
 
-  const [artists, setArtists] = useState<IArtist[]>([])
+  //const [artists, setArtists] = useState<IArtist[]>([])
   const[selectedDate, setSelectedDate] = useState<ISelectOption>({
     value: 'ALL', label: 'ALL'
   });
@@ -69,7 +70,7 @@ const SelectBlock: FC = () => {
     requestArtists();
   }
 
-  const fetchArtistsBySorting = useCallback((selectedOption: ISelectOption)=> {
+  /*const fetchArtistsBySorting = useCallback((selectedOption: ISelectOption)=> {
     artistsAPI
     .fetchArtists(selectedOption)
     .then(response => {
@@ -85,7 +86,7 @@ const SelectBlock: FC = () => {
 
   useEffect(() => {
     fetchArtistsBySorting(selectedDate);
-  }, [])
+  }, [])*/
 
   return (
   <div className = {styles.selectBlock}>
