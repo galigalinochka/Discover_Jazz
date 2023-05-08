@@ -1,4 +1,5 @@
 import styled, {css} from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const StyledFooter = styled.div`
 
@@ -20,6 +21,10 @@ export const StyledFooter = styled.div`
     text-transform: uppercase;
 
 
+`
+export const StyledNavLink = styled(NavLink)`
+    color: #F4F9FF;
+    text-decoration: none;
 `
 
 export const StyledCopyRight = styled.div`

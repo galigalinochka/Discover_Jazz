@@ -1,8 +1,13 @@
-import React, { useState, FC } from 'react';
+import { useState, useMemo, FC, createContext  } from 'react';
 import {Select, SelectStyles} from '../ui/select/select';
 import { ISelectOption } from '../../types/types';
 import styles from './mainCard.module.css';
 import { SingleValue } from 'react-select';
+import data from '../../data/artists';
+
+export const FilteredDataResult = createContext(data);
+
+
 
 const SelectBlock: FC = () => {
   const MAIN_STAGE = 'MAIN STAGE';
@@ -57,45 +62,79 @@ const SelectBlock: FC = () => {
     setSelectedSort(selectedOption)
   }
 
-  return (
-  <div className = {styles.selectBlock}>
-    <span className={styles.filtersHeader}>Filters</span>
-    <div className={styles.filters}>
-      <span className={styles.filtersName}>DATE</span>
-        <Select className = {isSelectOpened ? styles.select : styles.selectActive}
-                styles = {SelectStyles}
-                options = {optionsDate}
-                value = {selectedDate}
-                onBlur = {handleBlur}
-                onFocus = {handleFocus}
-                onChange={handleDateChange}
-        />
-    </div>
-    <div className={styles.filters}>
-      <span className={styles.filtersName}>STAGE</span>
-        <Select className = {isSelectOpened ? styles.select : styles.selectActive}
-                styles = {SelectStyles}
-                options = {optionsStage}
-                value = {selectedStage}
-                onBlur = {handleBlur}
-                onFocus = {handleFocus}
-                onChange={handleStageChange}
-        />
-    </div>
-    <div className={styles.filters}>
-      <span className={styles.filtersName}>SORT</span>
-        <Select className = {isSelectOpened ? styles.select : styles.selectActive}
-                styles = {SelectStyles}
-                options = {optionsSort}
-                value = {selectedSort}
-                onBlur = {handleBlur}
-                onFocus = {handleFocus}
-                onChange={handleSortChange}
-        />
-    </div>
+ 
+
+
+// filter
+
+
+const filteredData = useMemo(() => {
+
+    const filtered = data.filter(item => (
+      item.date === selectedDate.value &&
+      item.stage === selectedStage.value &&
+      item.sort === selectedSort.value
       
-    </div>
+    ));
+    
+    return filtered;
+  }, [selectedDate, selectedStage, selectedSort]);
+
+  
+
+  // console.log(filteredData)
+
+  
+
+  return (
+  <FilteredDataResult.Provider value={filteredData}> 
+    <div className = {styles.selectBlock}>
+      <span className={styles.filtersHeader}>Filters</span>
+      <div className={styles.filters}>
+        <span className={styles.filtersName}>DATE</span>
+          <Select className = {isSelectOpened ? styles.select : styles.selectActive}
+                  styles = {SelectStyles}
+                  options = {optionsDate}
+                  value = {selectedDate}
+                  onBlur = {handleBlur}
+                  onFocus = {handleFocus}
+                  onChange={handleDateChange}
+          />
+      </div>
+      <div className={styles.filters}>
+        <span className={styles.filtersName}>STAGE</span>
+          <Select className = {isSelectOpened ? styles.select : styles.selectActive}
+                  styles = {SelectStyles}
+                  options = {optionsStage}
+                  value = {selectedStage}
+                  onBlur = {handleBlur}
+                  onFocus = {handleFocus}
+                  onChange={handleStageChange}
+          />
+      </div>
+      <div className={styles.filters}>
+        <span className={styles.filtersName}>SORT</span>
+          <Select className = {isSelectOpened ? styles.select : styles.selectActive}
+                  styles = {SelectStyles}
+                  options = {optionsSort}
+                  value = {selectedSort}
+                  onBlur = {handleBlur}
+                  onFocus = {handleFocus}
+                  onChange={handleSortChange}
+          />
+      </div>
+        
+      </div>
+  </FilteredDataResult.Provider>  
+
+  
+
   );
+  
 };
 
-export default SelectBlock;
+// console.log(filteredData)
+
+export default SelectBlock
+  
+  

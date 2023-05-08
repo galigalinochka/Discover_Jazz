@@ -32,6 +32,14 @@ export const StyledArtistElementBig = styled.div`
     height: 360px;
     width: 720px;
     position: relative;
+    box-sizing: border-box;
+
+
+    /* &:hover{    
+        border-color: #BEC5FF;
+        border-bottom: none;    
+        border-style: solid;
+    } */
 
     & div {
 
@@ -49,7 +57,7 @@ export const StyledArtistElementBig = styled.div`
 
     }
 
-    
+   
 `
 
 export const StyledArtistElementSmall = styled.div`
@@ -59,6 +67,14 @@ export const StyledArtistElementSmall = styled.div`
     width: 360px;
     position: relative;
     justify-content: flex-end;
+    box-sizing: border-box;
+
+    /* &:hover {    
+        border-color: #BEC5FF;
+        /* border-bottom: none;     
+        border-style: solid;
+    } */
+    
 
     & div {
 
@@ -76,6 +92,7 @@ export const StyledArtistElementSmall = styled.div`
 
     }
     
+    
 `
 
 
@@ -91,12 +108,20 @@ export const StyledHoverMenuSmall = styled.span`
     width: 360px;
     background-color: #F8F8F8;
     animation: ${fadeIn} 0.3s ease-in-out 0.3s forwards;
-    
-    
+
+    /* box-sizing: border-box;
+    border-color: #BEC5FF;
+    /* border-top: none;     
+    border-style: solid;
+
+    /* border-right: 2px;
+    border-left: 2px;
+    border-bottom: 2px; */ 
     
     
     &:focus {
-               
+
+      
 
     }
 
@@ -180,6 +205,16 @@ export const StyledHoverMenuBig = styled.span`
     text-align: left;
     background-color: #F8F8F8;
     animation: ${fadeIn} 0.3s ease-in-out 0.3s forwards;
+
+    /* box-sizing: border-box;
+    border-color: #BEC5FF;
+    border-top: none;    
+    border-style: solid; */
+
+    /* border-right: 2px;
+    border-left: 2px;
+    border-bottom: 2px; */
+    
     
 
 

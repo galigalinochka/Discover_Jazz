@@ -51,6 +51,7 @@ export interface IArtist {
   id: number;
   name: string;
   stage: string;
+  sort: string;
   date: string;
   time: string;
   artistInfo: string;
