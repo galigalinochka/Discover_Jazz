@@ -2,14 +2,14 @@ import React, { FC } from 'react';
 import { default as ReactSelect, StylesConfig, GroupBase} from 'react-select';
 import styles from '../ui.module.css';
 import styled from 'styled-components';
-import { ISelectProps, ISelectOption, isMultiType } from '../../../types/types';
+import { ISelectProps, ISelectOption, isMultiType} from '../../../types/types';
 
 export const SelectStyles:StylesConfig<ISelectOption, isMultiType, GroupBase<ISelectOption>>  = {
-  container: (styles) => ({
+  container: (styles, {isFocused} : {isFocused: boolean}) => ({
     ...styles,
     width: '214px',
     color: '#BEC5FF',
-    border: 'none',
+    border: 'transparent',
     borderStyle: 'none',
     borderBottom: '1px solid #BEC5FF',
     outline: 'none',
@@ -18,7 +18,9 @@ export const SelectStyles:StylesConfig<ISelectOption, isMultiType, GroupBase<ISe
   control: (styles) => ({
     ...styles,
     backgroundColor:'none',
-    border: 'none',
+    borderStyle: 'hidden',
+    boxShadow: 'none',
+    cursor: 'pointer'
   }),
   indicatorSeparator: (styles) => ({
     ...styles,
@@ -35,6 +37,7 @@ export const SelectStyles:StylesConfig<ISelectOption, isMultiType, GroupBase<ISe
     ...styles,
     backgroundColor: isSelected ? "#dfd3c3" : "",
     color: isFocused || isSelected ? "black" : "",
+    cursor: 'pointer'
   }),
 }
 

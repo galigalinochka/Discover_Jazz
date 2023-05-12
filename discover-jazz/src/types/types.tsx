@@ -49,3 +49,12 @@ export interface IArtist {
   style?: string;
 }
 
+export interface IFilters {
+   date: Filter,
+   stage: Filter, 
+   sort: Filter 
+};
+export interface Filter {
+  value: string;
+  label: string;
+}
