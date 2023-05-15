@@ -1,0 +1,131 @@
+.container {
+  background: url('../../assets/SalesBlock_background.jpg') no-repeat;
+  background-size: cover;
+  height: 984px;
+  background-position: center;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  overflow: visible;
+  color: #5667FF;
+}
+
+.gridContainer {
+  width: 91%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6.5rem;
+}
+
+.salesBlockHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 64px;
+  margin-bottom: 212px;
+}
+
+.salesBlockHeaderList {
+  display: flex;
+  color: #5667FF;
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 30%;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.burger {
+  width: 23px;
+  height: 18px;
+}
+
+.salesBlockMain {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 58px; 
+}
+
+.salesBlockMainLogo {
+  width: 760px;
+  height: 256px;
+  padding-right: 4rem;
+  font-weight: 700;
+}
+
+.salesBlockToFestival {
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
+  color: #FFCC38;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04rem;
+}
+
+.salesBlockMainInfo {
+  display: flex;
+  justify-content: space-between;
+  color: #5667FF;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.MainInfoDate {
+  font-size: 2.5rem;
+  line-height: 3.15rem;
+  letter-spacing: 0.15rem;
+}
+
+.MainInfoPlace {
+  font-size: 1.7rem;
+}
+
+.MainInfoDots {
+  width: 15%;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-right: 52px;
+}
+
+.MainInfoDots span {
+  display: block;
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: #8B97FF;
+  border-radius: 50%;
+}
+
+.selectBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 76%;
+  margin: 0 auto;
+  color: #BEC5FF;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.filtersHeader::before {
+  content: url('../../assets/filter.svg');
+  padding-right: 0.43rem;
+}
+
+.filters {
+  display: flex;
+}
+
+.filtersName {
+  margin-right: 1rem;
+  align-self: center;
+}
+
+.select {
+  color: pink;
+}

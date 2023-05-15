@@ -1,0 +1,84 @@
+
+
+
+// @font-face {
+//   font-family: 'Inter';
+//   src: url('../../../discover-jazz/public/fonts/Inter-Black.otf') format('otf');
+//        //url('/path/to/Inter-Bold.woff') format('woff');
+//   font-weight: bold;
+//   font-style: normal;
+// }
+
+@font-face {
+  font-family: 'Inter-Bold', sans-serif;
+  src: url('../../../discover-jazz/public/fonts/Inter-Bold.ttf') format('ttf');
+       //url('/path/to/Inter-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+// // Define the different font sizes and line heights using the Inter font family
+// .h1 {
+
+//   font-family: 'Inter', sans-serif;
+//   font-size: 62px; // 3.875rem converted to rem
+//   line-height: 72px; // 72px converted to rem
+//   font-weight: bold;
+//   text-transform: uppercase;
+// }
+
+// .h2 {
+//   font-family: 'Inter', sans-serif;
+//   font-size: 2.25rem; // 36px converted to rem
+//   line-height: 2.75rem; // 44px converted to rem
+//   font-weight: bold;
+//   text-transform: uppercase;
+// }
+
+// .h3 {
+//   font-family: 'Inter', sans-serif;
+//   font-size: 1.75rem; // 28px converted to rem
+//   line-height: 2rem; // 32px converted to rem
+//   font-weight: bold;
+//   text-transform: uppercase;
+// }
+
+// .h4 {
+//   font-family: 'Inter', sans-serif;
+//   font-size: 1.5rem; // 24px converted to rem
+//   line-height: 1.875rem; // 30px converted to rem
+//   font-weight: bold;
+//   text-transform: uppercase;
+// }
+
+// .h5 {
+//   font-family: 'Inter', sans-serif;
+//   font-size: 1.25rem; // 20px converted to rem
+//   line-height: 1.5rem; // 24px converted to rem
+//   font-weight: bold;
+//   text-transform: uppercase;
+// }
+
+// .h6 {
+//   font-family: 'Inter', sans-serif;
+//   font-size: 1rem; // 16px converted to rem
+//   line-height: 1.25rem; // 20px converted to rem
+//   font-weight: bold;
+//   text-transform: uppercase;
+// }
+
+// @font-face {
+//   font-family: 'Mavick';
+//   src: url(../public/fonts/aMavickFont.woff2) format("woff2"), url(../public/fonts/aMavickFont.woff) format("woff"), url(../public/fonts/aMavickFont.ttf) format("truetype");
+//   font-weight: 400;
+//   font-style: normal;
+//   font-display: block;
+// }
+// @font-face {
+//   font-family: 'Museo100';
+//   src: url(../public/fonts/MuseoSansCyrl-100.eot);
+//   src: local(MuseoSansCyrl-100), url(../public/fonts/MuseoSansCyrl-100.eot?#iefix) format("embedded-opentype"), url(../public/fonts/MuseoSansCyrl-100.woff) format("woff"), url(../public/fonts/MuseoSansCyrl-100.ttf) format("truetype");
+//   font-weight: 300;
+//   font-style: normal;
+//   font-display: block;
+// }
