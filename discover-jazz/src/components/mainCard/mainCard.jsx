@@ -1,6 +1,6 @@
 import React, {FC, useState, useEffect, useRef } from 'react';
 import styles from './mainCard.module.css';
-import Logo from  '../../assets/Logo.png';
+import Logo from  '../../assets/Logo.svg';
 import Burger from  '../../assets/Burger.svg';
 import DiscoverJazz from '../../assets/DiscoverJazz.svg';
 import SelectBlock from './selectBlock';
@@ -10,18 +10,17 @@ import axios from 'axios';
 import { SingleValue } from 'react-select';
 
 const Main/*: FC*/ = () => {
-  const [filteredArtists, setFilteredArtists] = useState/*<IArtist[]>*/([]); // стейт артистов
+  const [filteredArtists, setFilteredArtists] = useState/*<IArtist[]>*/([]);
   const[selectedFilters, setSelectedFilters] = useState/*<IFilters>*/({
     date: {value: 'ALL', label: 'ALL'}, stage: {value: 'ALL', label: 'ALL'}, sort:  {value: 'ALL', label: 'ALL'}
-  });// стейт селект блока
+  });
   const prevFilteredArtistsRef = useRef([]);
 
  useEffect(() => {
   const fetchArtists = async() => {
     const response = await axios.get(`https://64412ad7792fe886a8a0319a.mockapi.io/artists`)/*.then((response)=> {*/
-      setFilteredArtists(response.data);
-      prevFilteredArtistsRef.current = response.data;   
-      console.log(prevFilteredArtistsRef.current);
+    setFilteredArtists(response.data);
+    prevFilteredArtistsRef.current = response.data;   
     };
    
     fetchArtists();
@@ -29,8 +28,6 @@ const Main/*: FC*/ = () => {
 
   useEffect(() => {
     let filtered = [...prevFilteredArtistsRef.current];
-    //let filtered = [...filteredArtists];
-    console.log(filtered);
     if (selectedFilters.date.value !== 'ALL') {
       filtered = filtered.filter((artist) => artist.date === selectedFilters.date.value);
       
@@ -41,10 +38,8 @@ const Main/*: FC*/ = () => {
     if (selectedFilters.sort.value !== 'ALL') {
       filtered = filtered.filter((artist) => artist.style.toLowerCase() === selectedFilters.sort.value.toLowerCase());
     }
-     setFilteredArtists(filtered);
-     
-    filtered = prevFilteredArtistsRef.current 
-     console.log(filtered);
+    setFilteredArtists(filtered);
+    filtered = prevFilteredArtistsRef.current; 
   }, [selectedFilters])
 
   return (

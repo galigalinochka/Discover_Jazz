@@ -11,7 +11,6 @@ import Footer from './components/footer/footer';
   Routes, // instead of "Switch"
   Route,
 } from "react-router-dom";*/
-import {CopyRight} from '../src/data/Copyright'
 
 
 

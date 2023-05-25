@@ -1,5 +1,9 @@
 import styled, { css, keyframes } from "styled-components";
 
+type StyledHoverMenuBigProps = {
+    display: string; 
+    flexDirection: string;
+}
 
 const fadeIn = keyframes`
   from {
@@ -12,17 +16,17 @@ const fadeIn = keyframes`
   }
 `;
 
-
 export const StyledArtistGrid = styled.section`
 
     display: flex; 
     max-width: 1440px;
     flex-wrap: wrap;
     flex-direction: row;
-    
-
 `
-
+/*const StyledDivContainer = styled.div<StyledHoverMenuBigProps>` 
+  display: ${({ display }) => display}; 
+  flex-direction: ${({ flexDirection }) => flexDirection};
+`;*/
 
 
 export const StyledArtistElementBig = styled.div`
@@ -33,25 +37,21 @@ export const StyledArtistElementBig = styled.div`
     width: 720px;
     position: relative;
 
-    & div {
-
+    & h4 {
         display: inline-block;
         text-align: right;
         font-weight: 700;
-        font-size: 36px;
-        line-height: 44px;
-        max-width: 200px;
+        font-size: 28px;
+        line-height: 32px;
+        max-width: 500px;
         padding-right: 24px;
         padding-top: 24px;
         color: #F8F8F8;
-        height: auto;        
+        height: auto;
         text-transform: uppercase;
-
+        margin-top: 4px;
     }
-
-    
 `
-
 export const StyledArtistElementSmall = styled.div`
 
     display: flex;
@@ -60,8 +60,7 @@ export const StyledArtistElementSmall = styled.div`
     position: relative;
     justify-content: flex-end;
 
-    & div {
-
+    & h4 {
         display: inline-block;
         text-align: right;
         font-weight: 700;
@@ -73,16 +72,15 @@ export const StyledArtistElementSmall = styled.div`
         color: #F8F8F8;
         height: auto;
         text-transform: uppercase;
-
+        margin-top: 4px;
     }
     
 `
 
+export const StyledHoverMenuSmall = styled.div`
 
-export const StyledHoverMenuSmall = styled.span`
-
-    display: block;
-    text-align: left;    
+    display: flex;
+    flex-direction: column;   
     position: absolute;
     bottom: -100%;
     z-index: 10;
@@ -97,14 +95,11 @@ export const StyledHoverMenuSmall = styled.span`
     }
 
     & h1 {
-
         display: inline-block;
         font-weight: 700;
         font-size: 36px;
-        line-height: 44px;
-        margin-left: 24px;
-        margin-top: 32px;
-        margin-bottom: 20px;
+        margin-left: 4px;
+        margin-top: 10px;
     }
 
     & h2 {
@@ -112,10 +107,9 @@ export const StyledHoverMenuSmall = styled.span`
         display: inline-block;
         font-weight: 700;
         font-size: 24px;
-        line-height: 30px;
-        margin-left: 24px;
-        margin-top: 20px;          
+        margin-left: 4px;         
         margin-bottom: 5px;
+        margin-top: 14px;
     }
 
     & h3 {
@@ -129,13 +123,12 @@ export const StyledHoverMenuSmall = styled.span`
     }
 
     & p {
-
         display: inline-block;
         font-weight: 700;
         font-size: 16px;
         text-decoration: underline; 
         line-height: 20px;         
-        margin-left: 24px;
+        margin-left: 4px;
         margin-top: 13px;          
         margin-bottom: 5px;
     }
@@ -151,9 +144,11 @@ export const StyledHoverMenuSmall = styled.span`
     }
 ` 
 
-export const StyledHoverMenuBig = styled.span`
 
-    display: block;
+export const StyledHoverMenuBig = styled.div`
+
+    display: grid;
+    grid-template-areas: "a b" "c c";
     position: absolute;
     bottom: -100%;
     z-index: 10;
@@ -166,74 +161,65 @@ export const StyledHoverMenuBig = styled.span`
     
     &:focus {
 
-        /* ;
         transition-duration: 0.3s;
         transition-timing-function: ease-in-out;
         z-index: 1;
-        transition: opacity 0.5s ease-in-out; */
+        transition: opacity 0.5s ease-in-out;
     }
 
     & h1 {
-
         display: inline-block;
         font-weight: 700;
         font-size: 36px;
         line-height: 44px;
         margin-left: 24px;
         margin-top: 32px;
-        margin-bottom: 34px;
-
+        margin-bottom: 40px;
     }
 
     & h2 {
-        
         display: inline-flex;
         font-weight: 700;
         font-size: 24px;
         line-height: 30px;
         margin-left: 24px;
         margin-top: 5px;        
-        margin-bottom: 10px;
-        
+        margin-bottom: 6px;
     }
 
-    & h3 {
-        
-        display: inline-block;
+    & h3 {        
+        display: flex;
+        grid-area: 'b';
         font-weight: 700;
         font-size: 24px;
-        line-height: 30px;              
-        
+        line-height: 30px; 
+        justify-content: center;
+        font-size: 24px;
+        align-items: center;   
     }
 
     & p {
-
         display: inline-block;
         font-weight: 700;
         font-size: 16px;
         line-height: 20px;  
         text-decoration: underline;  
         margin-left: 24px;
-        margin-top: 0px;
-        margin-bottom: 52px;
-
+        margin-top: 12px;
+        margin-bottom: 28px;
     }
 
     & span {
-
         display: inline-block;
         font-weight: 700;
         font-size: 28px;
         line-height: 32px;   
-        margin-left: 247px;     
+        margin-top: 76px;    
     }
-
     & div {
+        display: flex;
+        flex-direction: column;
+        grid-area: 'a';
+    } 
+`;
 
-        display: inline-block;
-        margin-left: 240px;
-        margin-right: 240px;
-        margin-bottom: 24px;
-
-    }
-` 

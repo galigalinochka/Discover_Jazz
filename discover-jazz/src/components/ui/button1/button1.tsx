@@ -9,7 +9,9 @@ const Button: FC<ButtonProps> = ({
   height,
   onClick, 
   width,
-  backgroundColor
+  backgroundColor,
+  gridArea,
+  margin
 }) => {
   return (
     <button className = {styles.button}
@@ -21,6 +23,8 @@ const Button: FC<ButtonProps> = ({
         height,
         width,
         color,
+        gridArea,
+        margin
       }}
     >
       {children}
