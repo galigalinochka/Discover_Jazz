@@ -10,7 +10,9 @@ export interface ButtonProps {
   radius?: string;
   width: string;
   textAlign?: string;
-  backgroundColor: string
+  backgroundColor: string;
+  gridArea?: string;
+  margin?: string;
 }
 
 export type isMultiType = true | false;
@@ -30,12 +32,6 @@ export interface ISelectOption {
   label: string;
 }
 
-export type DivProps = {
-  
-  heading: string;
-  
-};
-
 export interface IArtist {
   id: number;
   name: string;
@@ -47,6 +43,8 @@ export interface IArtist {
   linkTicketBuy?: string;
   photo: string;
   style?: string;
+  big: boolean;
+  info?: string;
 }
 
 export interface IFilters {
