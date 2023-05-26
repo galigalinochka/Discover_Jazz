@@ -1,8 +1,9 @@
-import React, { FC } from 'react';
-import Button from '../ui/button1/button1';
+import React, { FC, useState } from 'react';
+//import Button from '../ui/button1/button1';
 import {
     StyledHoverMenuBig,
     StyledHoverMenuSmall,
+    Button
 } from '../artistGrid/artistGrid.styles'
 import PointIcon from '../../assets/data/artistElementUi/PointIcon.jpg'
 import {IArtist} from '../../types/types';
@@ -15,6 +16,13 @@ export const ArtistHoverMenu: FC<IArtistHoveredProps> = ({artistHovered}) => {
 
   const StyledHoverMenu = artistHovered.big ? StyledHoverMenuBig : StyledHoverMenuSmall;
 
+  /*const [isHovered, setIsHovered] = useState(false);
+
+  const handleFocus = () => {
+    setIsHovered(true);
+    console.log('случился hover');
+  }*/
+
   return (
     <StyledHoverMenu>
       
@@ -26,23 +34,15 @@ export const ArtistHoverMenu: FC<IArtistHoveredProps> = ({artistHovered}) => {
       </div>     
       <h3>       
           <span>
-            <img src={PointIcon} alt="PointIcon" />
             WATCH INTERVIEW
           </span>  
       </h3>
       <Button
-         border="none"
-              color={'#1A18CA'}
-              height={'3.9rem'}
-              onClick={function (): void {
-                throw new Error('Function not implemented.');
-              }}
-              width={'22.5rem'}
-              backgroundColor={'#BEC5FF'}
-              gridArea={'c'}
-              margin={'0 auto'}
-            >
-              <strong style={{fontWeight: 'bold'}}>BUY TICKET</strong>
+        onClick={function (): void {
+          throw new Error('Function not implemented.');
+        }}
+      >
+        <strong style={{fontWeight: 'bold'}}>BUY TICKET</strong>
       </Button>           
     </StyledHoverMenu>
   );
