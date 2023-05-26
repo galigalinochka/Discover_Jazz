@@ -7,6 +7,7 @@ export interface ButtonProps {
   children?: React.ReactNode;
   height: string;
   onClick: () => void;
+  onFocus?: FocusEventHandler<HTMLButtonElement> | undefined;
   radius?: string;
   width: string;
   textAlign?: string;

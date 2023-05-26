@@ -1,7 +1,6 @@
 .container {
   background: url('../../assets/SalesBlock_background.jpg') no-repeat;
   background-size: cover;
-  height: 984px;
   background-position: center;
   position: relative;
   display: inline-block;
@@ -110,6 +109,10 @@
   font-size: 1.15rem;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.salesBlockFooter {
+  margin-bottom: 15px;
 }
 
 .filtersHeader::before {

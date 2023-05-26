@@ -8,6 +8,7 @@ import Artists from '../artistGrid/ArtistGrid';
 import { IArtist, ISelectOption, IFilters } from '../../types/types';
 import axios from 'axios';
 import { SingleValue } from 'react-select';
+import CountDownTimer from './CountDownTimer';
 
 const Main/*: FC*/ = () => {
   const [filteredArtists, setFilteredArtists] = useState/*<IArtist[]>*/([]);
@@ -56,7 +57,7 @@ const Main/*: FC*/ = () => {
           </div>
           <div className = {styles.salesBlockMain}>
             <img className = {styles.salesBlockMainLogo} src= {DiscoverJazz} alt="discover Jazz" />
-            <div className = {styles.salesBlockToFestival}>to the festival <span>45</span> d  <span>17:56:43</span></div>
+            <CountDownTimer countDownTimestampMs = {1716228000000}/>
           </div>
           
           <div className = {styles.salesBlockMainInfo}>
