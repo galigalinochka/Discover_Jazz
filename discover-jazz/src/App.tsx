@@ -2,15 +2,15 @@ import React from 'react';
 import '../src/styles/globals.scss';
 import {Header} from './components/header/Header';
 import Main from './components/mainCard/mainCard';
-//import Artists from '../src/components/artistGrid/ArtistGrid';
+import LineUp from '../src/components/LineUp/LineUp';
 import { SaleModule } from '../src/components/salesBlocks/SaleModule';
 import Footer from './components/footer/footer';
 //import { ISelectOption } from "./types/types";
-/*import {
+import {
   BrowserRouter,
-  Routes, // instead of "Switch"
+  Routes,
   Route,
-} from "react-router-dom";*/
+} from "react-router-dom";
 
 
 
@@ -44,12 +44,22 @@ function App() {
 //   }
 
   return (
-    <div className="global.scss, container">
-      <Header />
-      <Main />
-      <SaleModule />      
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="global.scss, container">
+        <Header />
+        <Routes>
+          <Route path = "/" element = {
+            <>
+            <Main />
+            <SaleModule /> 
+            </>
+          }/>
+          <Route path = "/lineup" element = {<LineUp />} />
+        </Routes>    
+        <Footer />
+
+      </div>
+    </BrowserRouter>
   );
 }
 
