@@ -1,12 +1,23 @@
 import React, { FC } from 'react';
 import SalesBlockHeader from '../mainCard/SalesBlockHeader';
+import ScheduleBlock from './ScheduleBlock';
+import {LineUpContainer} from './Lineup.styles';
+import {Props} from '../../types/types';
+import styles from './LineUp.module.css';
+
+
 
 const LineUp: FC = () => {
   return (
     <>
-      <SalesBlockHeader />
-      LineUp
-    </>
+      <LineUpContainer>
+        <div className = {styles.salesBlockHeaderContainer}>
+          <SalesBlockHeader style = {{width: '90%'}}/>
+        </div>
+        
+        <ScheduleBlock />
+      </LineUpContainer>
+      </>
   );
 };
 

@@ -1,14 +1,11 @@
 import React, {FC, useState, useEffect, useRef } from 'react';
-import { NavLink } from 'react-router-dom';
 import styles from './mainCard.module.css';
-import Logo from  '../../assets/Logo.svg';
-import Burger from  '../../assets/Burger.svg';
 import DiscoverJazz from '../../assets/DiscoverJazz.svg';
 import SelectBlock from './selectBlock';
 import Artists from '../artistGrid/ArtistGrid';
-import { IArtist, ISelectOption, IFilters } from '../../types/types';
+//import { IArtist, ISelectOption, IFilters } from '../../types/types';
 import axios from 'axios';
-import { SingleValue } from 'react-select';
+//import { SingleValue } from 'react-select';
 import CountDownTimer from './CountDownTimer';
 import SalesBlockHeader from './SalesBlockHeader';
 
@@ -76,7 +73,7 @@ const Main/*: FC*/ = () => {
         </div>
         </div>
         <div>
-          <Artists artists={filteredArtists}/*{prevFilteredArtistsRef.current}*/ />
+          <Artists artists={filteredArtists} />
         </div>
       </>
   );

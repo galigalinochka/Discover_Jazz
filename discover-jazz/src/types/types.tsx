@@ -1,5 +1,5 @@
 import { GroupBase,  OnChangeValue, SingleValue, StylesConfig, MultiValue, ActionMeta } from 'react-select';
-import React, { FocusEventHandler } from 'react';
+import React, { FocusEventHandler, ReactNode } from 'react';
 
 export interface ButtonProps {
   border: string;
@@ -46,6 +46,7 @@ export interface IArtist {
   style?: string;
   big: boolean;
   info?: string;
+  country?: string;
 }
 
 export interface IFilters {
@@ -57,3 +58,19 @@ export interface Filter {
   value: string;
   label: string;
 }
+
+export type Props = {
+  heading: string;
+  subheading?: ReactNode;
+  price?: ReactNode;
+  upToDate?: string;
+  inputWindow?: boolean;
+  actionButton1?: ReactNode;
+  actionButton2?: ReactNode;
+  image?: React.ReactNode;
+  color?: string;
+  backgrounImage?: string;
+  height?: any;
+  children?: ReactNode;
+  buttonUsed?: boolean;
+};
