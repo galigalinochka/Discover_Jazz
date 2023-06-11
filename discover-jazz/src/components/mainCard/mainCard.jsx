@@ -1,14 +1,13 @@
 import React, {FC, useState, useEffect, useRef } from 'react';
 import styles from './mainCard.module.css';
-import Logo from  '../../assets/Logo.svg';
-import Burger from  '../../assets/Burger.svg';
 import DiscoverJazz from '../../assets/DiscoverJazz.svg';
 import SelectBlock from './selectBlock';
 import Artists from '../artistGrid/ArtistGrid';
-import { IArtist, ISelectOption, IFilters } from '../../types/types';
+//import { IArtist, ISelectOption, IFilters } from '../../types/types';
 import axios from 'axios';
-import { SingleValue } from 'react-select';
+//import { SingleValue } from 'react-select';
 import CountDownTimer from './CountDownTimer';
+import SalesBlockHeader from './SalesBlockHeader';
 
 const Main/*: FC*/ = () => {
   const [filteredArtists, setFilteredArtists] = useState/*<IArtist[]>*/([]);
@@ -47,14 +46,7 @@ const Main/*: FC*/ = () => {
     <>
       <div className = {styles.container}>
         <div className = {styles.gridContainer}>
-          <div className = {styles.salesBlockHeader}>
-            <img className = {styles.logo} src= {Logo} alt="logo" />
-            <div className = {styles.salesBlockHeaderList}>
-              <span>Artists</span>
-              <span>Line-up</span>
-              <img src={Burger} alt="burger" className = {styles.burger}/>
-            </div>
-          </div>
+          <SalesBlockHeader />
           <div className = {styles.salesBlockMain}>
             <img className = {styles.salesBlockMainLogo} src= {DiscoverJazz} alt="discover Jazz" />
             <CountDownTimer countDownTimestampMs = {1716228000000}/>
@@ -81,7 +73,7 @@ const Main/*: FC*/ = () => {
         </div>
         </div>
         <div>
-          <Artists artists={filteredArtists}/*{prevFilteredArtistsRef.current}*/ />
+          <Artists artists={filteredArtists} />
         </div>
       </>
   );

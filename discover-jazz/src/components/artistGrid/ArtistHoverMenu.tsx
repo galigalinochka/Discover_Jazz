@@ -1,11 +1,9 @@
 import React, { FC, useState } from 'react';
-//import Button from '../ui/button1/button1';
 import {
     StyledHoverMenuBig,
     StyledHoverMenuSmall,
     Button
 } from '../artistGrid/artistGrid.styles'
-import PointIcon from '../../assets/data/artistElementUi/PointIcon.jpg'
 import {IArtist} from '../../types/types';
 
 export interface IArtistHoveredProps {
@@ -15,13 +13,6 @@ export interface IArtistHoveredProps {
 export const ArtistHoverMenu: FC<IArtistHoveredProps> = ({artistHovered}) => {
 
   const StyledHoverMenu = artistHovered.big ? StyledHoverMenuBig : StyledHoverMenuSmall;
-
-  /*const [isHovered, setIsHovered] = useState(false);
-
-  const handleFocus = () => {
-    setIsHovered(true);
-    console.log('случился hover');
-  }*/
 
   return (
     <StyledHoverMenu>

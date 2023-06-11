@@ -31,7 +31,7 @@ export const Header = (props: Props) => {
             <img src={ArrowIcon} alt="Arrow Icon" />
           </div>
           <div className={styles.headerElementBlockDesktop}>
-            <img src={PointIcon} alt="Point Icon" />
+            <img src={PointIcon} alt="Point Icon" className = {styles.dot}/>
             <HeaderElement heading={'on sale now'} />
           </div>
           <div className={styles.headerElementBlockDesktop}>
@@ -39,7 +39,7 @@ export const Header = (props: Props) => {
             <img src={ArrowIcon} alt="Arrow Icon" />
           </div>
           <div className={styles.headerElementBlockDesktop}>
-            <img src={PointIcon} alt="Point Icon" />
+            <img src={PointIcon} alt="Point Icon" className = {styles.dot}/>
             <HeaderElement heading={'on sale now'} />
           </div>
           <div className={styles.headerElementBlockDesktop}>
@@ -47,7 +47,7 @@ export const Header = (props: Props) => {
             <img src={ArrowIcon} alt="Arrow Icon" />
           </div>
           <div className={styles.headerElementBlockDesktop}>
-            <img src={PointIcon} alt="Point Icon" />
+            <img src={PointIcon} alt="Point Icon" className = {styles.dot}/>
             <HeaderElement heading={'on sale now'} />
           </div>
         </>
@@ -59,7 +59,7 @@ export const Header = (props: Props) => {
         <img src={ArrowIcon} alt="Arrow Icon" />
       </div>
       <div className={styles.headerElementBlockDesktop}>
-        <img src={PointIcon} alt="Point Icon" />
+        <img src={PointIcon} alt="Point Icon" className = {styles.dot}/>
         <HeaderElement heading={'on sale now'} />
       </div>
       <div className={styles.headerElementBlockDesktop}>
@@ -67,7 +67,7 @@ export const Header = (props: Props) => {
         <img src={ArrowIcon} alt="Arrow Icon" />
       </div>
       <div className={styles.headerElementBlockDesktop}>
-        <img src={PointIcon} alt="Point Icon" />
+        <img src={PointIcon} alt="Point Icon" className = {styles.dot}/>
         <HeaderElement heading={'on sale now'} />
       </div>
       </>
@@ -75,7 +75,7 @@ export const Header = (props: Props) => {
       {isLapTop && !isDesktop && !isDesktopMini && (
         <>   
         <div className={styles.headerElementBlockLapTop}>
-          <img src={PointIcon} alt="Point Icon" />
+          <img src={PointIcon} alt="Point Icon" className = {styles.dot}/>
           <HeaderElement heading={'on sale now'} />
         </div>       
         <div className={styles.headerElementBlockLapTop}>
@@ -83,7 +83,7 @@ export const Header = (props: Props) => {
           <img src={ArrowIcon} alt="Arrow Icon" />
         </div>
         <div className={styles.headerElementBlockLapTop}>
-          <img src={PointIcon} alt="Point Icon" />
+          <img src={PointIcon} alt="Point Icon" className = {styles.dot} />
           <HeaderElement heading={'on sale now'} />
         </div>
         <div className={styles.headerElementBlockLapTop}>
@@ -91,7 +91,7 @@ export const Header = (props: Props) => {
           <img src={ArrowIcon} alt="Arrow Icon" />
         </div>
         <div className={styles.headerElementBlockLapTop}>
-          <img src={PointIcon} alt="Point Icon" />
+          <img src={PointIcon} alt="Point Icon" className = {styles.dot} />
           <HeaderElement heading={'on sale now'} />
         </div>
       </>
@@ -100,10 +100,10 @@ export const Header = (props: Props) => {
         <>
           <div className={styles.headerElementBlockMobile}>
             <HeaderElement heading={'tickets'} />
-            <img src={ArrowIcon} alt="Arrow Icon" style={{ width: '17%', height: '17%'}} />
+            <img src={ArrowIcon} alt="Arrow Icon" style={{ width: '17%', height: '17%'}}  />
           </div>
           <div className={styles.headerElementBlockMobile}>
-            <img src={PointIcon} alt="Point Icon" style={{ width: '17%', height: '17%'}} />
+            <img src={PointIcon} alt="Point Icon" style={{ width: '17%', height: '17%'}} className = {styles.dot} />
             <HeaderElement heading={'on sale now'} />
           </div>
           <div className={styles.headerElementBlockMobile}>

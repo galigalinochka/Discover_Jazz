@@ -1,7 +1,6 @@
 @import 'fonts';
 
 html, body{
-
   display: flex;
   justify-items: center;
   justify-content: center;
@@ -9,7 +8,6 @@ html, body{
   font-family: 'Inter-Bold', sans-serif; 
   margin: 0;  
   padding: 0;
-    
   display: flex;
   justify-content: center;
   font-family: 'inter', sans-serif;
@@ -19,12 +17,9 @@ html, body{
 }
 
 .container{
- 
+  position: relative;
   max-width: 1440px;
-  
-
-  
-  height:auto;
+  height: auto;
   
 }
 

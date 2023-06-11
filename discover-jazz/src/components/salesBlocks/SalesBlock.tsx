@@ -9,29 +9,14 @@ import {
   StyledPrice,
   StyledUpToDate,
   StyledInputWindow,
-  // StyledActionButton,
   StyledImage,
   StyledImageContainer,
   StyledButtonBuy,
   StyledButtonInput,  
   }  from './salesBlock.styles'
-// import { type } from 'os';
+import { Props } from '../../types/types';
 
-type Props = {
-  heading: string;
-  subheading?: ReactNode;
-  price?: ReactNode;
-  upToDate?: string;
-  inputWindow?: boolean;
-  actionButton1?: ReactNode;
-  actionButton2?: ReactNode;
-  image?: React.ReactNode;
-  color?: string;
-  backgrounImage?: string;
-  height?: any;
-  children?: ReactNode;
-  buttonUsed?: boolean;
-};
+
 
 export const SalesBlock = (props:Props) => {
   return (
