@@ -18,7 +18,7 @@ import { Props } from '../../types/types';
 
 
 
-export const SalesBlock = (props:Props) => {
+export const SalesBlock = (props: Props) => {
   return (
     <div>
       <StyledSalesBlocks
@@ -28,17 +28,22 @@ export const SalesBlock = (props:Props) => {
             : `url(${props.backgrounImage}) no-repeat center center`,
           backgroundSize: 'cover',
           height: props.height,
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center'
         }}
       >
+        
         <StyledContainerHeading>
           <StyledHeading >          
               {props.heading}
           </StyledHeading>
         </StyledContainerHeading>
-
-        <StyledSubheading>
+        {props.children}
+        {/*<StyledSubheading>
           {props.subheading}
-        </StyledSubheading>
+      </StyledSubheading>
 
         <StyledPrice> 
           {props.price}          
@@ -52,16 +57,14 @@ export const SalesBlock = (props:Props) => {
           {props.actionButton2}          
         </StyledButtonInput>
 
-        <StyledButtonBuy>
-          {props.actionButton1}
-        </StyledButtonBuy>
-
         <StyledImageContainer> 
           <StyledImage>
             {props.image}
           </StyledImage> 
-        </StyledImageContainer>   
-              
+        </StyledImageContainer>  */} 
+          <StyledButtonBuy>
+          {props.actionButton1}
+        </StyledButtonBuy>    
       </StyledSalesBlocks>
     </div>  
   );

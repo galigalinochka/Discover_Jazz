@@ -7,51 +7,24 @@ import {
   StyledSubheadingParagraph,
   StyledSubheadingStayAptoDate,
   StyledSubheadingParagraphStayAptoDate,
+  StyledPriceBlock,
   StyledPriceElement,
-  StyledPriceElementLeft,
-  StyledPriceElementRight
+  StyledPriceElementRight,
+  StyledPrice
 } from './salesBlock.styles'
 import Sponsors from '../../assets/sponsors.svg'
 
 type Props = {};
+const days = ['ALL DAYS', '2 DAYS', '1 DAY'];
+const prices = ['150$', '100$', '70$'];
 
-export const SaleModule = (props:Props) => {
+export const SaleModule = (props: Props) => {
   return (
     <section>
       <SalesBlock 
         heading='tickets'
-        height='25rem'
-        color='#8B97FF'
-        price={
-          <>
-            <StyledPriceElement>
-              <StyledPriceElementLeft>
-                all days
-              </StyledPriceElementLeft>
-              <StyledPriceElementRight>
-                150$
-              </StyledPriceElementRight>
-            </StyledPriceElement>
-        
-            <StyledPriceElement>
-              <StyledPriceElementLeft>
-                2 days 
-              </StyledPriceElementLeft>
-              <StyledPriceElementRight>
-                100$
-              </StyledPriceElementRight>
-            </StyledPriceElement>
-        
-            <StyledPriceElement>
-              <StyledPriceElementLeft>
-                1 day 
-              </StyledPriceElementLeft>
-              <StyledPriceElementRight>
-                70$
-              </StyledPriceElementRight>
-            </StyledPriceElement>
-          </>
-        }
+        height='28.57rem'
+        color='#8B97FF'    
         actionButton1 = {
           <Button
               border="none"
@@ -61,22 +34,34 @@ export const SaleModule = (props:Props) => {
                 throw new Error('Function not implemented.');
               }}
               width={'19.5rem'}
-              backgroundColor={'#43454A'}
-              
+              backgroundColor={'#43454A'}             
             >
               <strong style={{fontWeight: 'bold'}}>go to the ticket store</strong>
             </Button>
 
-        }        
-
-      />
+        }>
+            <StyledPriceBlock>
+            {days.map(elem => {
+              return (
+                <StyledPriceElement>{elem}</StyledPriceElement>
+              )
+            })}
+            </StyledPriceBlock> 
+            <StyledPriceBlock> 
+            {prices.map(elem => {
+              return (
+                <StyledPriceElement>{elem}</StyledPriceElement>
+              )
+            })}
+            </StyledPriceBlock>       
+        </SalesBlock>
 
       <SalesBlock 
         heading='subscribe'
         height='29.5rem'
         color='#BEC5FF'
-        subheading={
-          <>
+        >
+        
           <StyledSubheadingStayAptoDate>
             stay up to date
           </StyledSubheadingStayAptoDate>
@@ -89,8 +74,6 @@ export const SaleModule = (props:Props) => {
             Sign up for our newsletters!
           </StyledSubheadingParagraphStayAptoDate>
           
-          </>
-        }
         actionButton2={
           
           <InputField
@@ -128,7 +111,7 @@ export const SaleModule = (props:Props) => {
 
         }        
       
-      />
+      </SalesBlock>
 
       <SalesBlock
         heading='info'

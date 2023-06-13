@@ -19,14 +19,14 @@ const ScheduleBlockArtist: FC<IArtistProps> = ({artist}) => {
     };
   }, [artist.photo]);
 
-  const styleImg = image ? { background: `url(${artist.photo})`, backgroundSize: 'cover' } : {};
+  const styleImg = image ? { background: `url(${artist.photo})`, backgroundSize: 'cover'} : {};
 
   return (
     <div className = {styles.scheduleBlockArtistContainer}>
-      <span className = {styles.scheduleTime}>{artist.time}</span>
-      <div style={styleImg}></div>
+      <div className = {styles.scheduleTime}>{artist.time}</div>
+      <div style={styleImg} className={styles.styleImg}></div>
       <div className = {styles.scheduleBlockArtistDetails}>
-        <p className = {styles.scheduleBlockArtistName}><span className = {styles.scheduleBlockArtistCountry}>{artist.country}</span>{artist.name}</p>
+        <span className = {styles.scheduleBlockArtistName}><span className = {styles.scheduleBlockArtistCountry}>{artist.country}</span>{artist.name}</span>
         <p className = {styles.scheduleBlockArtistMore}>more about artist</p>
         <p className = {styles.scheduleBlockArtistStage}>{artist.stage}</p>
       </div>  

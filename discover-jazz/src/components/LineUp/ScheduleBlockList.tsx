@@ -35,17 +35,11 @@ const ScheduleBlockList:FC<IScheduleBlockList> = ({artists, date}) => {
     {!isNil(artistsList) && 
       
       artistsList.map(artist => {
-        console.log(typeof(date));
-        console.log(typeof(artist.date));
-         if(date.trim() == artist.date?.trim()) {
+         if(date.trim() === artist.date?.trim()) {
           return(
-            <div key={artist.id}>
-              {artist.date}
-            </div>
+              <ScheduleBlockArtist key={artist.id} artist = {artist} />
           )
-          console.log(artist.date)
-        } else
-      return 'oops';
+        } else return ;
       })
     }
     </>
