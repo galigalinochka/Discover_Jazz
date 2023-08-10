@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Discover_Jazz/static/css/main.389edb5d.css",
+    "main.js": "/Discover_Jazz/static/js/main.368d1182.js",
+    "static/js/787.418e6f59.chunk.js": "/Discover_Jazz/static/js/787.418e6f59.chunk.js",
+    "static/media/LineUp_background.jpg": "/Discover_Jazz/static/media/LineUp_background.fc5f017a845500752b61.jpg",
+    "static/media/SalesBlock_background.jpg": "/Discover_Jazz/static/media/SalesBlock_background.4bc5fe082df9d2c6bc69.jpg",
+    "static/media/Inter-Bold.ttf": "/Discover_Jazz/static/media/Inter-Bold.9aab1ebe6bd16660e37e.ttf",
+    "static/media/sponsors.svg": "/Discover_Jazz/static/media/sponsors.0020a31d5083cb5a727a3bad633f27b8.svg",
+    "static/media/Logo.svg": "/Discover_Jazz/static/media/Logo.4e62e8b782bd9119fa4c47cea57da882.svg",
+    "static/media/DiscoverJazz.svg": "/Discover_Jazz/static/media/DiscoverJazz.8ed93b05c80206ed3ac9d2a6510bd9d4.svg",
+    "static/media/Instagram.svg": "/Discover_Jazz/static/media/Instagram.9af05bb7d037d0bb835f405d061e8081.svg",
+    "static/media/TikTok.svg": "/Discover_Jazz/static/media/TikTok.d67b4ed5da9b63530508a87423305a03.svg",
+    "static/media/filter.svg": "/Discover_Jazz/static/media/filter.330067d7f093ec744fca.svg",
+    "static/media/Twitter.svg": "/Discover_Jazz/static/media/Twitter.d0c199cd4cfee2e5d6aea9c1d841737d.svg",
+    "static/media/Facebook.svg": "/Discover_Jazz/static/media/Facebook.e4f08acb6670a2683b8ac3a295e62c5a.svg",
+    "static/media/Youtube.svg": "/Discover_Jazz/static/media/Youtube.0910ca9f2d188dcd978f282b29d28833.svg",
+    "index.html": "/Discover_Jazz/index.html",
+    "static/media/point.svg": "/Discover_Jazz/static/media/point.fc32f4a2f2b95306449481d30ebcde1c.svg",
+    "static/media/Burger.svg": "/Discover_Jazz/static/media/Burger.e0ea3f1d5a9c81d9cb20ee2e344942d3.svg",
+    "static/media/arrow.svg": "/Discover_Jazz/static/media/arrow.8d4b621de32aeffc651e6b9e66e7abe7.svg",
+    "main.389edb5d.css.map": "/Discover_Jazz/static/css/main.389edb5d.css.map",
+    "main.368d1182.js.map": "/Discover_Jazz/static/js/main.368d1182.js.map",
+    "787.418e6f59.chunk.js.map": "/Discover_Jazz/static/js/787.418e6f59.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.389edb5d.css",
+    "static/js/main.368d1182.js"
+  ]
+}
