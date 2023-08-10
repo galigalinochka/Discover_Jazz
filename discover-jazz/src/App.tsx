@@ -2,20 +2,24 @@ import React from 'react';
 import '../src/styles/globals.scss';
 import {Header} from './components/header/Header';
 import Main from './components/mainCard/mainCard';
-import Artists from '../src/components/artistGrid/ArtistGrid';
+import LineUp from '../src/components/LineUp/LineUp';
 import { SaleModule } from '../src/components/salesBlocks/SaleModule';
 import Footer from './components/footer/footer';
+//import { ISelectOption } from "./types/types";
 import {
   BrowserRouter,
-  Routes, // instead of "Switch"
+  Routes,
   Route,
 } from "react-router-dom";
-import {CopyRight} from '../src/data/Copyright'
 
 
 
 function App() {
+ /* const [selectedOption, setSelectedOption] = React.useState({ value: 'ALL', label: 'ALL' });
 
+  const handleSortChange = (selectedOption: ISelectOption) => {
+    setSelectedOption(selectedOption);
+  }*/
 //   return (
 //     <BrowserRouter>
 //       <Routes>
@@ -40,13 +44,22 @@ function App() {
 //   }
 
   return (
-    <div className="global.scss, container">
-      <Header />
-      <Main />
-      <Artists/>
-      <SaleModule />      
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="global.scss, container">
+        <Header />
+        <Routes>
+          <Route path = "/" element = {
+            <>
+            <Main />
+            <SaleModule /> 
+            </>
+          }/>
+          <Route path = "/lineup" element = {<LineUp />} />
+        </Routes>    
+        <Footer />
+
+      </div>
+    </BrowserRouter>
   );
 }
 

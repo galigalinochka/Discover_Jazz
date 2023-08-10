@@ -4,10 +4,9 @@ import styled, {css} from "styled-components";
 
 export const StyledSalesBlocks = styled.section`
 
-  display: inline-block; 
+  display: block; 
   box-sizing: border-box;
   position: relative;  
-  margin: -0.2rem;
   padding: 0rem;
   width: 100%;
   
@@ -16,25 +15,21 @@ export const StyledSalesBlocks = styled.section`
 export const StyledContainerHeading = styled.div`
 
   display: flex; 
-  position: absolute;
   justify-content: center; 
   align-items: center; 
   width: 4.5rem;
   height: 100%;
-  margin-left: 3.5rem;   
-   
-  
+  margin-left: 5.4rem;    
 `
 export const StyledHeading = styled.div`
 
   display: flex;
-  font-size: 4rem;    
+  font-size: 4.57rem;    
   font-style: bold;   
   font-weight: 700;
   transform: rotate(270deg);
   color: #000000;
   text-transform: uppercase;
-
 `
 
 export const StyledSubheading = styled.div`
@@ -91,20 +86,13 @@ export const StyledPrice = styled.p`
   /* top: 10%;     */
   /* width: 100%; */
 `
-export const StyledPriceElement = styled.p`
-
+export const StyledPriceBlock = styled.div`
   display: block;
-  
-
-
-
 `
-export const StyledPriceElementLeft = styled.p`
-
+export const StyledPriceElement = styled.p`
   display: inline-block;
-  font-family: Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 28px;
+  font-weight: 700;
+  font-size: 2rem;
   line-height: 32px;
   width: 22.563rem;
   /* margin-right: 14.375rem; */
@@ -113,20 +101,17 @@ export const StyledPriceElementLeft = styled.p`
   text-align: left;
   text-transform: uppercase;
   /* padding-right: 14rem;  */
-
 `
 export const StyledPriceElementRight = styled.p`
-  
   display: inline-block;
   font-family: Inter, sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 64px;
   line-height: 72px;
   line-height: 93%;
   text-align: left;
   margin-top: 0.25rem;
   margin-bottom:0.25rem;
-
 `
 
 export const StyledUpToDate = styled.p`
@@ -138,13 +123,12 @@ export const StyledButtonBuy = styled.span`
 
   /* display: flex;
   /* padding-bottom: 10px;   */
-  /* justify-content: flex-end; */ 
-  position: absolute;
+  /* justify-content: flex-end;
+  position: absolute; */ 
   bottom: 4rem;
   right: 4rem;
 
 `
-
 export const StyledButtonInput = styled.span`
 
   display: flex;
@@ -156,16 +140,13 @@ export const StyledButtonInput = styled.span`
   margin-right: 4rem;
   
 `
-
 export const StyledImageContainer = styled.p`
 
   display: block; 
-  
   margin-left: 16rem;
   margin-right: 12rem;
   margin-top: 6rem;
   /* position: absolute; */
-  
   /* /* text-align: center; */
   /* vertical-align: middle;  */
   /* top: 30%; */
@@ -173,8 +154,6 @@ export const StyledImageContainer = styled.p`
   /* transform: translate(-50%, -50%); */  
   
 `
-
-
 export const StyledImage = styled.p`
   
   display: block;

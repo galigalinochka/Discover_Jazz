@@ -1,36 +1,29 @@
-import React, { useState, FC } from 'react';
+import React, { useState, useEffect, useCallback, FC } from 'react';
 import {Select, SelectStyles} from '../ui/select/select';
-import { ISelectOption } from '../../types/types';
+import { Filter, IFilters, ISelectOption } from '../../types/types';
 import styles from './mainCard.module.css';
 import { SingleValue } from 'react-select';
 
-const SelectBlock: FC = () => {
-  const MAIN_STAGE = 'MAIN STAGE';
-  const SECOND_STAGE = '2nd STAGE';
-  const optionsStage: ISelectOption[] = [
-    {value: 'MAIN_STAGE', label: MAIN_STAGE },
-    {value: 'SECOND_STAGE', label: SECOND_STAGE}
+const SelectBlock/*: FC<{ value: IFilters, onFilterChange: (filters: IFilters) => void }>*/= ({ value, onFilterChange })=> {
+ 
+  const optionsStage/*: ISelectOption[]*/ = [
+    {value: 'ALL', label: 'ALL'},
+    {value: 'MAIN STAGE', label: 'MAIN STAGE' },
+    {value: '2nd STAGE', label: '2nd STAGE' }
   ];
-  const optionsDate: ISelectOption[] = [
+  const optionsDate/*: ISelectOption[]*/ = [
+    {value: 'ALL', label: 'ALL'},
     {value: '20 MAY', label: '20 MAY' },
     {value: '21 MAY', label: '21 MAY' },
     {value: '27 MAY', label: '27 MAY' },
     {value: '28 MAY', label: '28 MAY' },
   ];
-  const optionsSort: ISelectOption[] = [
-    {value: 'POPULAR', label: 'POPULAR' },
+  const optionsSort/*: ISelectOption[]*/ = [
+    {value: 'ALL', label: 'ALL'},
+    {value: 'JAZZ', label: 'JAZZ' },
     {value: 'FOLK', label: 'FOLK' },
-    {value: 'POP', label: 'POP' },
+    {value: 'POP', label: 'POP' }, 
   ];
-  const[selectedDate, setSelectedDate] = useState<ISelectOption>({
-    value: 'ALL', label: 'ALL'
-  });
-  const[selectedStage, setSelectedStage] = useState<ISelectOption>({
-    value: 'ALL', label: 'ALL'
-  });
-  const[selectedSort, setSelectedSort] = useState<ISelectOption>({
-    value: 'ALL', label: 'ALL'
-  });
 
   const [isSelectOpened, setIsSelectOpened] = useState(false);
 
@@ -42,21 +35,11 @@ const SelectBlock: FC = () => {
     setIsSelectOpened(true);
   }
 
-  const handleDateChange = (selectedOption: SingleValue<ISelectOption>) => {
-    if(selectedOption === null) return;
-    setSelectedDate(selectedOption)
+  const handleFilterChange = (fieldName, newFilters) => {
+    const updatedFilters = { ...value, [fieldName]: newFilters };
+    onFilterChange(updatedFilters);
   }
-
-  const handleStageChange = (selectedOption: SingleValue<ISelectOption>) => {
-    if(selectedOption === null) return;
-    setSelectedStage(selectedOption)
-  }
-
-  const handleSortChange = (selectedOption: SingleValue<ISelectOption>) => {
-    if(selectedOption === null) return;
-    setSelectedSort(selectedOption)
-  }
-
+  
   return (
   <div className = {styles.selectBlock}>
     <span className={styles.filtersHeader}>Filters</span>
@@ -65,10 +48,10 @@ const SelectBlock: FC = () => {
         <Select className = {isSelectOpened ? styles.select : styles.selectActive}
                 styles = {SelectStyles}
                 options = {optionsDate}
-                value = {selectedDate}
+                value = {value.date}
                 onBlur = {handleBlur}
                 onFocus = {handleFocus}
-                onChange={handleDateChange}
+                onChange={(selectedOption) => handleFilterChange('date', selectedOption)}
         />
     </div>
     <div className={styles.filters}>
@@ -76,10 +59,10 @@ const SelectBlock: FC = () => {
         <Select className = {isSelectOpened ? styles.select : styles.selectActive}
                 styles = {SelectStyles}
                 options = {optionsStage}
-                value = {selectedStage}
+                value = {value.stage}
                 onBlur = {handleBlur}
                 onFocus = {handleFocus}
-                onChange={handleStageChange}
+                onChange={(selectedOption) => handleFilterChange('stage', selectedOption)}
         />
     </div>
     <div className={styles.filters}>
@@ -87,13 +70,12 @@ const SelectBlock: FC = () => {
         <Select className = {isSelectOpened ? styles.select : styles.selectActive}
                 styles = {SelectStyles}
                 options = {optionsSort}
-                value = {selectedSort}
+                value = {value.sort}
                 onBlur = {handleBlur}
                 onFocus = {handleFocus}
-                onChange={handleSortChange}
+                onChange={(selectedOption) => handleFilterChange('sort', selectedOption)}
         />
     </div>
-      
     </div>
   );
 };

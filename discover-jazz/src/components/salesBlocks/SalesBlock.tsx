@@ -9,31 +9,16 @@ import {
   StyledPrice,
   StyledUpToDate,
   StyledInputWindow,
-  // StyledActionButton,
   StyledImage,
   StyledImageContainer,
   StyledButtonBuy,
   StyledButtonInput,  
   }  from './salesBlock.styles'
-// import { type } from 'os';
+import { Props } from '../../types/types';
 
-type Props = {
-  heading: string;
-  subheading?: ReactNode;
-  price?: ReactNode;
-  upToDate?: string;
-  inputWindow?: boolean;
-  actionButton1?: ReactNode;
-  actionButton2?: ReactNode;
-  image?: React.ReactNode;
-  color?: string;
-  backgrounImage?: string;
-  height?: any;
-  children?: ReactNode;
-  buttonUsed?: boolean;
-};
 
-export const SalesBlock = (props:Props) => {
+
+export const SalesBlock = (props: Props) => {
   return (
     <div>
       <StyledSalesBlocks
@@ -43,17 +28,22 @@ export const SalesBlock = (props:Props) => {
             : `url(${props.backgrounImage}) no-repeat center center`,
           backgroundSize: 'cover',
           height: props.height,
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center'
         }}
       >
+        
         <StyledContainerHeading>
           <StyledHeading >          
               {props.heading}
           </StyledHeading>
         </StyledContainerHeading>
-
-        <StyledSubheading>
+        {props.children}
+        {/*<StyledSubheading>
           {props.subheading}
-        </StyledSubheading>
+      </StyledSubheading>
 
         <StyledPrice> 
           {props.price}          
@@ -67,16 +57,14 @@ export const SalesBlock = (props:Props) => {
           {props.actionButton2}          
         </StyledButtonInput>
 
-        <StyledButtonBuy>
-          {props.actionButton1}
-        </StyledButtonBuy>
-
         <StyledImageContainer> 
           <StyledImage>
             {props.image}
           </StyledImage> 
-        </StyledImageContainer>   
-              
+        </StyledImageContainer>  */} 
+          <StyledButtonBuy>
+          {props.actionButton1}
+        </StyledButtonBuy>    
       </StyledSalesBlocks>
     </div>  
   );

@@ -17,7 +17,7 @@ import twitter from '../../assets/social/Twitter.svg'
 import youtube from '../../assets/social/Youtube.svg'
 import tiktok from '../../assets/social/TikTok.svg'
 
-import { NavLink } from 'react-router-dom';
+//import { NavLink } from 'react-router-dom';
 
 const footer = () => {
   return (

@@ -1,5 +1,5 @@
-import { GroupBase,  OnChangeValue, SingleValue, StylesConfig, MultiValue } from 'react-select';
-import React, { FocusEventHandler } from 'react';
+import { GroupBase,  OnChangeValue, SingleValue, StylesConfig, MultiValue, ActionMeta } from 'react-select';
+import React, { FocusEventHandler, ReactNode } from 'react';
 
 export interface ButtonProps {
   border: string;
@@ -7,10 +7,13 @@ export interface ButtonProps {
   children?: React.ReactNode;
   height: string;
   onClick: () => void;
+  onFocus?: FocusEventHandler<HTMLButtonElement> | undefined;
   radius?: string;
   width: string;
   textAlign?: string;
-  backgroundColor: string
+  backgroundColor: string;
+  gridArea?: string;
+  margin?: string;
 }
 
 export type isMultiType = true | false;
@@ -22,7 +25,7 @@ export interface ISelectProps {
   value: SingleValue<ISelectOption> | MultiValue<ISelectOption>;
   onBlur?:  FocusEventHandler<HTMLInputElement>;
   onFocus?:  FocusEventHandler<HTMLInputElement>;
-  onChange: any;
+  onChange?: any;
 }
 
 export interface ISelectOption {
@@ -30,32 +33,44 @@ export interface ISelectOption {
   label: string;
 }
 
-export type DivProps = {
-  
-  heading: string;
-  
-};
-
-/*export interface DivElement extends HTMLDivElement {
-  heading?: string;
-  itemId?: string;
-  itemValue?: string;
-  border?: string;
-  color?: string;
-  height?: string;
-  width?: string;
-  backgroundColor: string;
-}*/
-
 export interface IArtist {
   id: number;
   name: string;
-  stage: string;
-  date: string;
-  time: string;
-  artistInfo: string;
-  linkVideo: string;
-  linkTicketBuy: string;
+  stage?: string;
+  date?: string;
+  time?: string;
+  artistInfo?: string;
+  linkVideo?: string;
+  linkTicketBuy?: string;
   photo: string;
+  style?: string;
+  big: boolean;
+  info?: string;
+  country?: string;
 }
 
+export interface IFilters {
+   date: Filter,
+   stage: Filter, 
+   sort: Filter 
+};
+export interface Filter {
+  value: string;
+  label: string;
+}
+
+export type Props = {
+  heading: string;
+  subheading?: ReactNode;
+  price?: ReactNode;
+  upToDate?: string;
+  inputWindow?: boolean;
+  actionButton1?: ReactNode;
+  actionButton2?: ReactNode;
+  image?: React.ReactNode;
+  color?: string;
+  backgrounImage?: string;
+  height?: any;
+  children?: ReactNode;
+  buttonUsed?: boolean;
+};

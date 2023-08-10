@@ -1,0 +1,83 @@
+.salesBlockHeaderContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+
+.scheduleBlockContainer {
+  margin-bottom: 64px;
+}
+
+.scheduleBlockArtistContainer {
+  background-color: #5464A0;
+  color: #F8F8F8;
+  display: flex;
+  flex-direction: row;
+  height: 136px;
+  width: 100%;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.scheduleBlockHeader {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-left: 4rem;
+  font-weight: 700;
+  color: #F8F8F8;
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+
+.scheduleBlockHeader:first-child {
+  margin-top: 19.4rem;
+}
+
+.scheduleTime {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-weight: 700;
+  font-size: 2rem;
+  width: 13.5%;
+}
+
+.styleImg {
+  width: 136px;
+  height: 136px;
+}
+
+.scheduleBlockArtistDetails {
+  width: 77.2%;
+  margin-top: 16px;
+  padding-left: 32px;
+}
+
+.scheduleBlockArtistName {
+  font-weight: 700;
+  font-size: 2.6rem;
+  position: relative;
+  
+}
+
+.scheduleBlockArtistCountry {
+  font-weight: 700;
+  font-size: 1.14rem;
+  position: absolute;
+  right: -25px;
+  top: 2px;
+}
+
+.scheduleBlockArtistMore {
+  font-size: 0.71rem;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.scheduleBlockArtistStage {
+  font-weight: 700;
+  font-size: 1.43rem;
+}

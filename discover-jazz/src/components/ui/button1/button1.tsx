@@ -9,18 +9,24 @@ const Button: FC<ButtonProps> = ({
   height,
   onClick, 
   width,
-  backgroundColor
+  backgroundColor,
+  gridArea,
+  margin,
+  onFocus
 }) => {
   return (
     <button className = {styles.button}
       onClick = {onClick}
+      onFocus = {onFocus}
       style = {{
-        backgroundColor,
-        border,
-        borderRadius: border,
-        height,
-        width,
-        color,
+      backgroundColor,
+      border,
+      borderRadius: border,
+      height,
+      width,
+      color,
+      gridArea,
+      margin,
       }}
     >
       {children}

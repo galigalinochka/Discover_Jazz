@@ -18,6 +18,5 @@ const StyledHeader = styled.header`
   overflow: hidden;
   margin: 0em;
   `
-  
-  
+
 export default StyledHeader

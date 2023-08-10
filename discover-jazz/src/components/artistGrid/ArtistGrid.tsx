@@ -1,31 +1,28 @@
-import React from 'react';
-import styles from './artistGrid.module.css';
+import React, { useState, useEffect, useCallback, FC } from 'react';
+import { isNil } from 'lodash';
 import { StyledArtistGrid } from '../artistGrid/artistGrid.styles'
 import ArtistElement from '../artistGrid/ArtistElement'
-import data from '../../data/artists';
-import { IArtist } from "../../../src/types/types"
+import { IArtist, ISelectOption } from "../../../src/types/types";
 
-const Artists = () => {
+export interface IArtistsProps {
+  artists: IArtist[];
+  //selectedOption: ISelectOption;
+}
+
+const Artists: FC<IArtistsProps> = ({ artists }) => {
+
   return (
     <StyledArtistGrid>
-      {data.map(artist => {
-        // console.log(artist.id);
-        // console.log(artist.photo);
+      {!isNil(artists) && 
+      
+      artists.map(artist => {
         return (
-          <ArtistElement          
-            name={artist.name}
-            big={artist.name === 'Gregory Porter' || artist.name === 'Esperanza Spalding'}
-            photo={artist.photo}
-            id={artist.id}
+          <ArtistElement key = { artist.id} artist = {artist}
           />
         );
       })}
-    </StyledArtistGrid>
-    
+    </StyledArtistGrid>  
   );  
 };
 
 export default Artists;
- 
-
-
